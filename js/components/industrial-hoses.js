@@ -4,27 +4,27 @@ class IndustrialHosesPage {
       {
         title: "РУКАВ ДЛЯ МАСЕЛ TU-20",
         image: "https://stanok-rvd.ru/prom_rukava/tu_20_titul.jpg",
-        link: "../../pages/products/industrial-hoses/oil.html",
+        link: "/stanok-rvd/pages/products/industrial-hoses/oil.html",
         description: "ШЛАНГ МБС SEMPERIT TU20 TU10 TU25 TU40",
       },
       {
         title: "РУКАВ ДЛЯ ТОПЛИВА TM-30",
         image: "https://stanok-rvd.ru/prom_rukava/tm30_titul.jpg",
-        link: "../../pages/products/industrial-hoses/fuel.html",
+        link: "/stanok-rvd/pages/products/industrial-hoses/fuel.html",
         description:
           "РУКАВ ТОПЛИВНЫЙ МБС SEMPERIT TM30. Топливозаправочные машины.",
       },
       {
         title: "РУКАВ ДЛЯ ПАРА И ГОРЯЧЕЙ ВОДЫ DS-1",
         image: "https://stanok-rvd.ru/prom_rukava/ds_1_titul.jpg",
-        link: "../../pages/products/industrial-hoses/steam.html",
+        link: "/stanok-rvd/pages/products/industrial-hoses/steam.html",
         description:
           "РУКАВ ШЛАНГ ДЛЯ ПАРА DS1 210гр SEMPERIT, IVG Colbachini SPA",
       },
       {
         title: "РУКАВ ДЛЯ ПЕСКОСТРУЙНОЙ ОЧИСТКИ",
         image: "https://stanok-rvd.ru/prom_rukava/sm2_titul.jpg",
-        link: "../../pages/products/industrial-hoses/abradant.html",
+        link: "/stanok-rvd/pages/products/industrial-hoses/abradant.html",
         description: "РУКАВ ДЛЯ ПЕСКОСТРУЙНЫХ МАШИН SEMPERIT SM 2",
       },
     ];

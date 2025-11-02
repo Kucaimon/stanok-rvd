@@ -5,7 +5,7 @@ class BallValvesPage {
       {
         title: "КРАН ШАРОВЫЙ ВЫСОКОГО ДАВЛЕНИЯ 2Х ХОДОВОЙ",
         image: "https://stanok-rvd.ru/kran_sharovyy/bvs-2.png",
-        link: "../../pages/products/valves/2x_xodovoy.html",
+        link: "/stanok-rvd/pages/products/valves/2x_xodovoy.html",
         description:
           "КРАНЫ ШАРОВЫЕ ВЫСОКОГО ДАВЛЕНИЯ 2Х ХОДОВОЙ, INTEVA, HOLMBURY, GEMELS, PISTER, LSQ",
       },
@@ -13,14 +13,14 @@ class BallValvesPage {
         title:
           "КРАН ШАРОВЫЙ ВЫСОКОГО ДАВЛЕНИЯ 2Х ХОДОВОЙ МЕТРИЧЕСКАЯ РЕЗЬБА DIN 2353",
         image: "https://stanok-rvd.ru/kran_sharovyy/bvs-2.png",
-        link: "../../pages/products/valves/2x_hodovoy_din2353.html",
+        link: "/stanok-rvd/pages/products/valves/2x_hodovoy_din2353.html",
         description:
           "КРАНЫ ШАРОВЫЕ ВЫСОКОГО ДАВЛЕНИЯ 2Х ХОДОВОЙ МЕТРИЧЕСКАЯ РЕЗЬБА DIN 2353",
       },
       {
         title: "КРАН ШАРОВЫЙ ВЫСОКОГО ДАВЛЕНИЯ 3Х ХОДОВОЙ",
         image: "https://stanok-rvd.ru/kran_sharovyy/bvs-3.png",
-        link: "../../pages/products/valves/3x_xodovoy.html",
+        link: "/stanok-rvd/pages/products/valves/3x_xodovoy.html",
         description:
           "КРАНЫ ШАРОВЫЕ ВЫСОКОГО ДАВЛЕНИЯ 3Х ХОДОВОЙ, INTEVA, HOLMBURY, GEMELS, PISTER, LSQ",
       },

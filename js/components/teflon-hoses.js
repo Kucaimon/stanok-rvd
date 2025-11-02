@@ -4,21 +4,21 @@ class TeflonHosesPage {
       {
         title: "РУКАВ PTFE1",
         image: "https://stanok-rvd.ru/teflon/ptfe1.jpg",
-        link: "../../pages/products/teflon-hoses/rvd_ptfe1.html",
+        link: "/stanok-rvd/pages/products/teflon-hoses/rvd_ptfe1.html",
         description:
           "РУКАВА ФТОРОПЛАСТОВЫЕ И ТЕФЛОНОВЫЕ PTFE1, SAE 100 R14 (с одной металлической оплеткой)",
       },
       {
         title: "РУКАВ PTFE2",
         image: "https://stanok-rvd.ru/teflon/ptfe2.jpg",
-        link: "../../pages/products/teflon-hoses/rvd_ptfe2.html",
+        link: "/stanok-rvd/pages/products/teflon-hoses/rvd_ptfe2.html",
         description:
           "РУКАВА ФТОРОПЛАСТОВЫЕ И ТЕФЛОНОВЫЕ PTFE2, SAE 100 R14 (с двумя металлическими оплетками)",
       },
       {
         title: "РУКАВ PTFEGW (ГОФРА)",
         image: "https://stanok-rvd.ru/teflon/ptfegw.jpg",
-        link: "../../pages/products/teflon-hoses/rvd_gwm1.html",
+        link: "/stanok-rvd/pages/products/teflon-hoses/rvd_gwm1.html",
         description:
           "РУКАВА ФТОРОПЛАСТОВЫЕ И ТЕФЛОНОВЫЕ PTFE GW, SAE 100 R14 (гофрированный тефлон)",
       },
