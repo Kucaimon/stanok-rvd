@@ -1,0 +1,64 @@
+:root {
+  /* Colors */
+  --primary-green: #22c55e;
+  --dark-green: #16a34a;
+  --light-green: #4ade80;
+  --green-50: #f0fdf4;
+  --green-100: #dcfce7;
+  --green-shadow: rgba(34, 197, 94, 0.15);
+  --green-shadow-lg: rgba(34, 197, 94, 0.25);
+  --industrial-gray: #374151;
+  --metal-light: #9ca3af;
+  --metal-dark: #4b5563;
+  --white: #ffffff;
+  --light-bg: #f8fafc;
+  --border-color: #e5e7eb;
+  --primary-blue: var(--primary-green);
+  --text-secondary: var(--metal-dark);
+
+  /* Typography */
+  --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+
+  /* Shadows */
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-green: 0 4px 12px var(--green-shadow);
+  --shadow-green-lg: 0 8px 20px var(--green-shadow-lg);
+
+  /* Breakpoints */
+  --mobile: 768px;
+  --tablet: 1024px;
+  --desktop: 1200px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--space-3);
+  }
+}

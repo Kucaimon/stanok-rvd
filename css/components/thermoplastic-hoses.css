@@ -1,0 +1,242 @@
+/* Thermoplastic Hoses Page Styles */
+.breadcrumbs {
+  background: var(--light-bg);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: var(--font-size-sm);
+}
+
+.breadcrumb-link {
+  color: var(--primary-green);
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: lowercase;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-link:hover {
+  color: var(--dark-green);
+}
+
+.breadcrumb-separator {
+  color: var(--metal-light);
+  margin: 0 var(--space-2);
+}
+
+.breadcrumb-current {
+  color: var(--metal-dark);
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+.thermoplastic-hoses-content {
+  padding: var(--space-8) 0;
+}
+
+/* Main Title Section */
+.main-title-section {
+  text-align: center;
+  margin-bottom: var(--space-6);
+  padding: var(--space-6);
+  background: linear-gradient(135deg, var(--light-bg) 0%, var(--white) 100%);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.main-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--industrial-gray);
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Description Section */
+.description-section {
+  margin-bottom: var(--space-8);
+}
+
+.description-text {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: var(--space-6);
+  line-height: 1.7;
+  color: var(--metal-dark);
+  text-align: justify;
+}
+
+.description-text p {
+  margin-bottom: var(--space-4);
+}
+
+.description-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Hoses Section */
+.hoses-section {
+  margin-bottom: var(--space-8);
+}
+
+.hoses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-6);
+}
+
+.hose-card {
+  background: var(--white);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: var(--space-6);
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.hose-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--primary-green);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.hose-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-green);
+}
+
+.hose-card:hover::before {
+  transform: scaleX(1);
+}
+
+.hose-image {
+  width: 100%;
+  max-width: 200px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: var(--space-4);
+  border-radius: 8px;
+  padding: var(--space-2);
+  background: var(--light-bg);
+  transition: transform 0.3s ease;
+}
+
+.hose-card:hover .hose-image {
+  transform: scale(1.05);
+}
+
+.hose-title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--industrial-gray);
+  margin-bottom: var(--space-4);
+  line-height: 1.3;
+  min-height: 2.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hose-link {
+  display: inline-block;
+  background: var(--primary-green);
+  color: var(--white);
+  padding: var(--space-3) var(--space-6);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.5px;
+}
+
+.hose-link:hover {
+  background: var(--dark-green);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hoses-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-4);
+  }
+
+  .main-title {
+    font-size: var(--font-size-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs {
+    padding: var(--space-2) 0;
+    font-size: var(--font-size-xs);
+  }
+
+  .thermoplastic-hoses-content {
+    padding: var(--space-6) 0;
+  }
+
+  .hoses-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-4);
+  }
+
+  .main-title-section {
+    padding: var(--space-4);
+    margin-bottom: var(--space-4);
+  }
+
+  .description-text {
+    padding: var(--space-4);
+  }
+
+  .hose-card {
+    padding: var(--space-4);
+  }
+
+  .hose-image {
+    max-width: 180px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hoses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hose-card {
+    padding: var(--space-3);
+  }
+
+  .hose-image {
+    height: 120px;
+    margin-bottom: var(--space-3);
+  }
+
+  .hose-title {
+    font-size: var(--font-size-sm);
+  }
+
+  .hose-link {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--font-size-xs);
+  }
+
+  .main-title {
+    font-size: var(--font-size-base);
+  }
+}

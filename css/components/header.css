@@ -1,0 +1,96 @@
+.header {
+  background: linear-gradient(to bottom, var(--white) 0%, var(--green-50) 100%);
+  border-bottom: 3px solid var(--primary-green);
+  box-shadow: 0 2px 8px var(--green-shadow);
+}
+
+.header__top {
+  background: var(--light-bg);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.contact-phone {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--industrial-gray);
+  transition: all 0.3s ease;
+  padding: var(--space-2) var(--space-4);
+  border-radius: 8px;
+}
+
+.contact-phone:hover {
+  color: var(--primary-green);
+  background: var(--green-100);
+  transform: translateY(-1px);
+}
+
+.contact-email {
+  color: var(--metal-dark);
+  transition: all 0.3s ease;
+  padding: var(--space-2) var(--space-4);
+  border-radius: 8px;
+}
+
+.contact-email:hover {
+  color: var(--primary-green);
+  background: var(--green-100);
+}
+
+.header__main {
+  padding: var(--space-8) 0;
+}
+
+.logo-section {
+  text-align: center;
+}
+
+.logo-placeholder {
+  margin-bottom: var(--space-4);
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+}
+
+.logo-title {
+  font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-4xl));
+  font-weight: 600;
+  color: var(--industrial-gray);
+  margin-bottom: var(--space-2);
+  text-transform: uppercase;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.logo-subtitle {
+  font-size: clamp(var(--font-size-base), 2vw, var(--font-size-xl));
+  color: var(--metal-dark);
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .contact-info {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .header__main {
+    padding: var(--space-6) 0;
+  }
+
+  .logo-img {
+    height: 50px;
+  }
+}

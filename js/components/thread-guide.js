@@ -1,0 +1,673 @@
+// thread-guide.js
+class ThreadGuidePage {
+  constructor() {
+    this.threadData = [
+      {
+        diameterMin: "9,3",
+        diameterMax: "9,7",
+        inchPitch: "28tpi",
+        metricPitch: "0,907 мм",
+        bsp: '1/8"',
+        dkol: "",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "8,5",
+        nutMax: "8,9",
+      },
+      {
+        diameterMin: "9,3",
+        diameterMax: "9,7",
+        inchPitch: "29tpi",
+        metricPitch: "0,876 мм",
+        bsp: "",
+        dkol: "",
+        jic: "",
+        orfs: "",
+        nptf: '1/8"',
+        nutMin: "8,5",
+        nutMax: "8,9",
+      },
+      {
+        diameterMin: "9,7",
+        diameterMax: "9,9",
+        inchPitch: "",
+        metricPitch: "1,5 мм",
+        bsp: "",
+        dkol: "M10",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "8,2",
+        nutMax: "8,6",
+      },
+      {
+        diameterMin: "10,9",
+        diameterMax: "11,1",
+        inchPitch: "20tpi",
+        metricPitch: "1,270 мм",
+        bsp: "",
+        dkol: "",
+        jic: '7/16"',
+        orfs: '7/16"',
+        nptf: "",
+        nutMin: "9,7",
+        nutMax: "10,0",
+      },
+      {
+        diameterMin: "11,6",
+        diameterMax: "11,9",
+        inchPitch: "",
+        metricPitch: "1,5 мм",
+        bsp: "",
+        dkol: "M12",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "10,2",
+        nutMax: "10,6",
+      },
+      {
+        diameterMin: "12,4",
+        diameterMax: "12,7",
+        inchPitch: "20tpi",
+        metricPitch: "1,270 мм",
+        bsp: "",
+        dkol: "",
+        jic: '1/2"',
+        orfs: '1/2"',
+        nptf: "",
+        nutMin: "11,3",
+        nutMax: "11,6",
+      },
+      {
+        diameterMin: "12,9",
+        diameterMax: "13,1",
+        inchPitch: "19tpi",
+        metricPitch: "1,337 мм",
+        bsp: '1/4"',
+        dkol: "",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "11,4",
+        nutMax: "11,9",
+      },
+      {
+        diameterMin: "12,9",
+        diameterMax: "13,1",
+        inchPitch: "18tpi",
+        metricPitch: "1,411 мм",
+        bsp: "",
+        dkol: "",
+        jic: "",
+        orfs: "",
+        nptf: '1/4"',
+        nutMin: "11,4",
+        nutMax: "11,9",
+      },
+      {
+        diameterMin: "13,6",
+        diameterMax: "13,9",
+        inchPitch: "",
+        metricPitch: "1,5 мм",
+        bsp: "",
+        dkol: "M14",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "12,2",
+        nutMax: "12,6",
+      },
+      {
+        diameterMin: "14,0",
+        diameterMax: "14,3",
+        inchPitch: "18tpi",
+        metricPitch: "1,411 мм",
+        bsp: "",
+        dkol: "",
+        jic: '9/16"',
+        orfs: '9/16"',
+        nptf: "",
+        nutMin: "12,7",
+        nutMax: "13,9",
+      },
+      {
+        diameterMin: "15,6",
+        diameterMax: "15,9",
+        inchPitch: "",
+        metricPitch: "1,5 мм",
+        bsp: "",
+        dkol: "M16",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "14,2",
+        nutMax: "14,6",
+      },
+      {
+        diameterMin: "16,3",
+        diameterMax: "16,6",
+        inchPitch: "19tpi",
+        metricPitch: "1,337 мм",
+        bsp: '3/8"',
+        dkol: "",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "14,9",
+        nutMax: "15,4",
+      },
+      {
+        diameterMin: "16,3",
+        diameterMax: "16,6",
+        inchPitch: "18tpi",
+        metricPitch: "1,411 мм",
+        bsp: "",
+        dkol: "",
+        jic: "",
+        orfs: "",
+        nptf: '3/8"',
+        nutMin: "14,9",
+        nutMax: "15,4",
+      },
+      {
+        diameterMin: "17,6",
+        diameterMax: "17,9",
+        inchPitch: "",
+        metricPitch: "1,5 мм",
+        bsp: "",
+        dkol: "M18",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "16,2",
+        nutMax: "16,6",
+      },
+      {
+        diameterMin: "18,7",
+        diameterMax: "19,0",
+        inchPitch: "16tpi",
+        metricPitch: "1,588 мм",
+        bsp: "",
+        dkol: "",
+        jic: '3/4"',
+        orfs: '3/4"',
+        nptf: "",
+        nutMin: "17,3",
+        nutMax: "17,6",
+      },
+      {
+        diameterMin: "19,6",
+        diameterMax: "19,9",
+        inchPitch: "",
+        metricPitch: "1,5 мм",
+        bsp: "",
+        dkol: "M20",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "18,2",
+        nutMax: "18,6",
+      },
+      {
+        diameterMin: "20,5",
+        diameterMax: "20,9",
+        inchPitch: "14tpi",
+        metricPitch: "1,814 мм",
+        bsp: '1/2"',
+        dkol: "",
+        jic: "",
+        orfs: "",
+        nptf: '1/2"',
+        nutMin: "18,6",
+        nutMax: "19,0",
+      },
+      {
+        diameterMin: "21,6",
+        diameterMax: "21,9",
+        inchPitch: "",
+        metricPitch: "1,5 мм",
+        bsp: "",
+        dkol: "M22",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "20,2",
+        nutMax: "20,6",
+      },
+      {
+        diameterMin: "22,0",
+        diameterMax: "22,2",
+        inchPitch: "14tpi",
+        metricPitch: "1,814 мм",
+        bsp: "",
+        dkol: "",
+        jic: '7/8"',
+        orfs: '7/8"',
+        nptf: "",
+        nutMin: "20,5",
+        nutMax: "20,5",
+      },
+      {
+        diameterMin: "22,6",
+        diameterMax: "22,9",
+        inchPitch: "14tpi",
+        metricPitch: "1,814 мм",
+        bsp: '5/8"',
+        dkol: "",
+        jic: "",
+        orfs: "",
+        nptf: '5/8"',
+        nutMin: "20,6",
+        nutMax: "21,0",
+      },
+      {
+        diameterMin: "23,6",
+        diameterMax: "23,9",
+        inchPitch: "",
+        metricPitch: "1,5 мм",
+        bsp: "",
+        dkol: "M24",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "22,2",
+        nutMax: "22,6",
+      },
+      {
+        diameterMin: "25,6",
+        diameterMax: "25,9",
+        inchPitch: "",
+        metricPitch: "1,5 мм",
+        bsp: "",
+        dkol: "M26",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "24,2",
+        nutMax: "24,6",
+      },
+      {
+        diameterMin: "26,1",
+        diameterMax: "26,4",
+        inchPitch: "14tpi",
+        metricPitch: "1,814 мм",
+        bsp: '3/4"',
+        dkol: "",
+        jic: "",
+        orfs: "",
+        nptf: '3/4"',
+        nutMin: "24,1",
+        nutMax: "24,5",
+      },
+      {
+        diameterMin: "26,6",
+        diameterMax: "26,9",
+        inchPitch: "12tpi",
+        metricPitch: "2,117 мм",
+        bsp: "",
+        dkol: "",
+        jic: '1.1/16"',
+        orfs: '1.1/16"',
+        nptf: "",
+        nutMin: "24,4",
+        nutMax: "24,7",
+      },
+      {
+        diameterMin: "29,6",
+        diameterMax: "29,9",
+        inchPitch: "",
+        metricPitch: "2,0 мм",
+        bsp: "",
+        dkol: "M30",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "27,4",
+        nutMax: "27,8",
+      },
+      {
+        diameterMin: "29,8",
+        diameterMax: "30,1",
+        inchPitch: "12tpi",
+        metricPitch: "2,117 мм",
+        bsp: "",
+        dkol: "",
+        jic: '1.3/16"',
+        orfs: '1.3/16"',
+        nptf: "",
+        nutMin: "27,6",
+        nutMax: "27,9",
+      },
+      {
+        diameterMin: "29,6",
+        diameterMax: "29,9",
+        inchPitch: "",
+        metricPitch: "1,5 мм",
+        bsp: "",
+        dkol: "M30",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "28,2",
+        nutMax: "28,6",
+      },
+      {
+        diameterMin: "31,6",
+        diameterMax: "31,9",
+        inchPitch: "",
+        metricPitch: "2,0 мм",
+        bsp: "",
+        dkol: "M32",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "29,4",
+        nutMax: "29,9",
+      },
+      {
+        diameterMin: "33,0",
+        diameterMax: "33,2",
+        inchPitch: "11tpi",
+        metricPitch: "2,309 мм",
+        bsp: '1"',
+        dkol: "",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "30,3",
+        nutMax: "30,8",
+      },
+      {
+        diameterMin: "33,0",
+        diameterMax: "33,3",
+        inchPitch: "12tpi",
+        metricPitch: "2,117 мм",
+        bsp: "",
+        dkol: "",
+        jic: '1.5/16"',
+        orfs: '1.5/16"',
+        nptf: "",
+        nutMin: "30,8",
+        nutMax: "31,2",
+      },
+      {
+        diameterMin: "32,9",
+        diameterMax: "33,4",
+        inchPitch: "11,5tpi",
+        metricPitch: "2,209 мм",
+        bsp: "",
+        dkol: "",
+        jic: "",
+        orfs: "",
+        nptf: '1"',
+        nutMin: "30,3",
+        nutMax: "30,8",
+      },
+      {
+        diameterMin: "35,6",
+        diameterMax: "35,9",
+        inchPitch: "",
+        metricPitch: "2,0 мм",
+        bsp: "",
+        dkol: "M36",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "33,4",
+        nutMax: "33,8",
+      },
+      {
+        diameterMin: "37,6",
+        diameterMax: "37,9",
+        inchPitch: "",
+        metricPitch: "1,5 мм",
+        bsp: "",
+        dkol: "M38",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "36,2",
+        nutMax: "36,6",
+      },
+      {
+        diameterMin: "40,9",
+        diameterMax: "41,2",
+        inchPitch: "12tpi",
+        metricPitch: "2,117 мм",
+        bsp: "",
+        dkol: "",
+        jic: '1.5/8"',
+        orfs: '1.5/8"',
+        nptf: "",
+        nutMin: "38,7",
+        nutMax: "39,1",
+      },
+      {
+        diameterMin: "41,6",
+        diameterMax: "41,9",
+        inchPitch: "",
+        metricPitch: "2,0 мм",
+        bsp: "",
+        dkol: "M42",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "39,4",
+        nutMax: "39,8",
+      },
+      {
+        diameterMin: "41,5",
+        diameterMax: "41,9",
+        inchPitch: "11tpi",
+        metricPitch: "2,309 мм",
+        bsp: '1.1/4"',
+        dkol: "",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "39,0",
+        nutMax: "39,5",
+      },
+      {
+        diameterMin: "41,4",
+        diameterMax: "42,0",
+        inchPitch: "11,5tpi",
+        metricPitch: "2,209 мм",
+        bsp: "",
+        dkol: "",
+        jic: "",
+        orfs: "",
+        nptf: '1.1/4"',
+        nutMin: "39,2",
+        nutMax: "39,6",
+      },
+      {
+        diameterMin: "44,6",
+        diameterMax: "44,9",
+        inchPitch: "",
+        metricPitch: "2,0 мм",
+        bsp: "",
+        dkol: "M45",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "42,4",
+        nutMax: "42,8",
+      },
+      {
+        diameterMin: "44,6",
+        diameterMax: "44,9",
+        inchPitch: "",
+        metricPitch: "1,5 мм",
+        bsp: "",
+        dkol: "M45",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "43,2",
+        nutMax: "43,6",
+      },
+      {
+        diameterMin: "47,3",
+        diameterMax: "47,6",
+        inchPitch: "12tpi",
+        metricPitch: "2,117 мм",
+        bsp: "",
+        dkol: "",
+        jic: '1.7/8"',
+        orfs: '1.7/8"',
+        nptf: "",
+        nutMin: "45,1",
+        nutMax: "45,5",
+      },
+      {
+        diameterMin: "47,4",
+        diameterMax: "47,8",
+        inchPitch: "11tpi",
+        metricPitch: "2,309 мм",
+        bsp: '1.1/2"',
+        dkol: "",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "44,8",
+        nutMax: "45,3",
+      },
+      {
+        diameterMin: "47,3",
+        diameterMax: "47,9",
+        inchPitch: "11,5tpi",
+        metricPitch: "2,209 мм",
+        bsp: "",
+        dkol: "",
+        jic: "",
+        orfs: "",
+        nptf: '1.1/2"',
+        nutMin: "45,1",
+        nutMax: "45,5",
+      },
+      {
+        diameterMin: "51,6",
+        diameterMax: "51,9",
+        inchPitch: "",
+        metricPitch: "2,0 мм",
+        bsp: "",
+        dkol: "M52",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "49,4",
+        nutMax: "49,6",
+      },
+      {
+        diameterMin: "51,6",
+        diameterMax: "51,9",
+        inchPitch: "",
+        metricPitch: "1,5 мм",
+        bsp: "",
+        dkol: "M52",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "50,2",
+        nutMax: "50,6",
+      },
+      {
+        diameterMin: "56,2",
+        diameterMax: "56,6",
+        inchPitch: "11tpi",
+        metricPitch: "2,309 мм",
+        bsp: '2"',
+        dkol: "",
+        jic: "",
+        orfs: "",
+        nptf: "",
+        nutMin: "59,2",
+        nutMax: "59,6",
+      },
+    ];
+
+    this.init();
+  }
+
+  init() {
+    this.renderThreadTable();
+    this.addTableInteractions();
+  }
+
+  renderThreadTable() {
+    const threadTable = document.getElementById("thread-table");
+    if (!threadTable) return;
+
+    threadTable.innerHTML = `
+            <thead>
+                <tr>
+                    <th colspan="2">Наружный диаметр резьбы (mm) штуцера</th>
+                    <th colspan="2">Шаг резьбы</th>
+                    <th colspan="5">Тип фитинга или адаптера</th>
+                    <th colspan="2">Внутренний диаметр резьбы (mm) гайки</th>
+                </tr>
+                <tr>
+                    <th>от</th>
+                    <th>до</th>
+                    <th>дюймовый<br>ниток на дюйм</th>
+                    <th>метрический<br>мм</th>
+                    <th><a href="https://stanok-rvd.ru/fitingi/fitingi_bsp/" class="thread-link" title="Фитинг BSP ISO 228-1 AGR">BSP<br>(T)<br>(K)R</a></th>
+                    <th><a href="https://stanok-rvd.ru/fitingi/fitingi_dkol/" class="thread-link" title="ФИТИНГИ С МЕТРИЧЕСКИМИ РЕЗЬБАМИ DKOL/CEL, DIN 2353/3865, ISO8434-4">DKOL</a><br><a href="https://stanok-rvd.ru/fitingi/fitingi_dkos/" class="thread-link" title="ФИТИНГИ С МЕТРИЧЕСКИМИ РЕЗЬБАМИ, DKOS/CES, DIN 2353/3865, ISO8434-4, DIN 20066">DKOS</a><br><a href="https://stanok-rvd.ru/fitingi/fitingi_dkl/" class="thread-link" title="ФИТИНГ ДЛЯ РВД ТИП DK DKL СФЕРА КОНУС УПЛОТНЕНИЯ 24°, 37°, 60°">DK</a></th>
+                    <th><a href="https://stanok-rvd.ru/fitingi/fitingi_jic/" class="thread-link" title="ГИДРАВЛИЧЕСКИЕ ФИТИНГИ JIС SAE J514 и ISO 725 или ISO 8434-2 конус уплотнения 37гр">JIC<br>(UNF)</a></th>
+                    <th><a href="https://stanok-rvd.ru/fitingi/fitingi_orfs/" class="thread-link" title="ГИДРАВЛИЧЕСКИЕ ФИТИНГИ ORFS РЕЗЬБА UNF/UN SAE J1453 И ISO 8434-3">ORFS<br>(UNF)</a></th>
+                    <th><a href="https://stanok-rvd.ru/fitingi/fitingi_nptf/" class="thread-link" title="Фитинг NPTF(Ш) ШТУЦЕР коническая наружная резьба">NPTF</a><br>NPSM</th>
+                    <th>от</th>
+                    <th>до</th>
+                </tr>
+            </thead>
+            <tbody>
+                ${this.threadData
+                  .map(
+                    (row) => `
+                    <tr>
+                        <td>${row.diameterMin}</td>
+                        <td>${row.diameterMax}</td>
+                        <td>${row.inchPitch}</td>
+                        <td>${row.metricPitch}</td>
+                        <td>${row.bsp}</td>
+                        <td>${row.dkol}</td>
+                        <td>${row.jic}</td>
+                        <td>${row.orfs}</td>
+                        <td>${row.nptf}</td>
+                        <td>${row.nutMin}</td>
+                        <td>${row.nutMax}</td>
+                    </tr>
+                `
+                  )
+                  .join("")}
+            </tbody>
+        `;
+  }
+
+  addTableInteractions() {
+    const table = document.querySelector(".thread-table");
+    if (!table) return;
+
+    const rows = table.querySelectorAll("tbody tr");
+
+    rows.forEach((row) => {
+      row.addEventListener("mouseenter", () => {
+        row.style.backgroundColor = "rgba(46, 125, 50, 0.1)";
+      });
+
+      row.addEventListener("mouseleave", () => {
+        const index = Array.from(rows).indexOf(row);
+        row.style.backgroundColor =
+          index % 2 === 0 ? "var(--white)" : "var(--light-bg)";
+      });
+    });
+  }
+}
+
+// Initialize Thread Guide page when DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
+  new ThreadGuidePage();
+});

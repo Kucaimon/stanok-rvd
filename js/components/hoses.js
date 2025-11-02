@@ -1,0 +1,74 @@
+class HosesPage {
+  constructor() {
+    this.hoses = [
+      {
+        title: "РУКАВ EN 853 1SN",
+        image: "https://stanok-rvd.ru/rvd/shlang_1sn.jpg",
+        link: "../../pages/products/hoses/en853-1sn.html",
+        description: "РУКАВ ВЫСОКОГО ДАВЛЕНИЯ EN853 1SN SAE 100R1AT",
+      },
+      {
+        title: "РУКАВ EN 853 2SN",
+        image: "https://stanok-rvd.ru/rvd/shlang_2sn.jpg",
+        link: "../../pages/products/hoses/en853-2sn.html",
+        description: "РУКАВ ВЫСОКОГО ДАВЛЕНИЯ EN853 2SN SAE 100 R2AT",
+      },
+      {
+        title: "РУКАВ EN 856 4SP",
+        image: "https://stanok-rvd.ru/rvd/shlahg_4sp.jpg",
+        link: "../../pages/products/hoses/en856-4sp.html",
+        description: "РУКАВ ВЫСОКОГО ДАВЛЕНИЯ EN856 4SP SAE100R9",
+      },
+      {
+        title: "РУКАВ EN 856 4SH",
+        image: "https://stanok-rvd.ru/rvd/shlahg_4sp.jpg",
+        link: "../../pages/products/hoses/en856-4sh.html",
+        description: "РУКАВ ВЫСОКОГО ДАВЛЕНИЯ EN856 4SH SAE100R9",
+      },
+      {
+        title: "РУКАВ EN 856 R13",
+        image: "https://stanok-rvd.ru/rvd/shlang_r13.jpg",
+        link: "../../pages/products/hoses/en856-r13.html",
+        description: "РУКАВ ВЫСОКОГО ДАВЛЕНИЯ EN856 R13",
+      },
+      {
+        title: "РУКАВ EN 856 R15",
+        image: "https://stanok-rvd.ru/rvd/shlang_r13.jpg",
+        link: "../../pages/products/hoses/en856-r15.html",
+        description: "РУКАВ ВЫСОКОГО ДАВЛЕНИЯ EN856 R15",
+      },
+    ];
+
+    this.render();
+  }
+
+  render() {
+    this.renderHoses();
+  }
+
+  renderHoses() {
+    const hosesGrid = document.getElementById("hoses-grid");
+    if (!hosesGrid) return;
+
+    hosesGrid.innerHTML = this.hoses
+      .map(
+        (hose) => `
+            <div class="hose-card">
+                <a href="${hose.link}" title="${hose.description}">
+                    <img src="${hose.image}" alt="${hose.title}" class="hose-image" loading="lazy">
+                </a>
+                <h3 class="hose-title">${hose.title}</h3>
+                <a href="${hose.link}" class="hose-link" title="${hose.description}">
+                    Подробнее
+                </a>
+            </div>
+        `
+      )
+      .join("");
+  }
+}
+
+// Initialize hoses page when DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
+  new HosesPage();
+});

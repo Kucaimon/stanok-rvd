@@ -1,0 +1,511 @@
+/* gost-specifications.css */
+/* GOST Content */
+.gost-content {
+  padding: var(--space-8) 0;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.page-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Content Cards */
+.content-card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.section-title {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin-bottom: var(--space-4);
+  border-bottom: 2px solid var(--primary-green);
+  padding-bottom: var(--space-2);
+}
+
+.table-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: var(--font-size-base);
+  margin-bottom: var(--space-4);
+  font-weight: 500;
+}
+
+/* Tables */
+.table-container {
+  overflow-x: auto;
+  margin: var(--space-4) 0;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.specifications-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+  background: var(--white);
+}
+
+.specifications-table th {
+  background: var(--primary-green);
+  color: var(--white);
+  font-weight: 500;
+  padding: var(--space-3);
+  text-align: center;
+  border: 1px solid var(--dark-green);
+  white-space: nowrap;
+  text-transform: lowercase;
+}
+
+.specifications-table td {
+  padding: var(--space-3);
+  text-align: center;
+  border: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+.specifications-table tbody tr:nth-child(even) {
+  background: var(--light-bg);
+}
+
+.specifications-table tbody tr:hover {
+  background: var(--light-green);
+}
+
+.specifications-table .optional {
+  color: var(--metal-dark);
+  font-style: italic;
+}
+
+/* Temperature Table */
+.temperature-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+  background: var(--white);
+}
+
+.temperature-table th {
+  background: var(--primary-green);
+  color: var(--white);
+  font-weight: 500;
+  padding: var(--space-3);
+  text-align: center;
+  border: 1px solid var(--dark-green);
+  text-transform: lowercase;
+}
+
+.temperature-table td {
+  padding: var(--space-3);
+  text-align: center;
+  border: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+.temperature-table tbody tr:nth-child(even) {
+  background: var(--light-bg);
+}
+
+.temperature-table tbody tr:hover {
+  background: var(--light-green);
+}
+
+/* Info Box */
+.info-box {
+  display: flex;
+  align-items: flex-start;
+  background: #e3f2fd;
+  border: 1px solid #bbdefb;
+  border-radius: 8px;
+  padding: var(--space-4);
+}
+
+.info-icon {
+  font-size: var(--font-size-lg);
+  margin-right: var(--space-3);
+  flex-shrink: 0;
+}
+
+.info-content {
+  flex: 1;
+}
+
+.info-content h3 {
+  color: var(--primary-blue);
+  margin: 0 0 var(--space-2) 0;
+  font-size: var(--font-size-lg);
+}
+
+.info-content p {
+  margin: 0 0 var(--space-2) 0;
+}
+
+.info-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Table Note */
+.table-note {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 6px;
+  padding: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.table-note p {
+  margin: 0;
+  color: #856404;
+  font-size: var(--font-size-sm);
+}
+
+/* Sections */
+.specifications-section,
+.temperature-section,
+.additional-info {
+  margin-bottom: var(--space-6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gost-content {
+    padding: var(--space-6) 0;
+  }
+
+  .page-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .content-card {
+    padding: var(--space-4);
+  }
+
+  .specifications-table,
+  .temperature-table {
+    font-size: var(--font-size-xs);
+  }
+
+  .specifications-table th,
+  .specifications-table td,
+  .temperature-table th,
+  .temperature-table td {
+    padding: var(--space-2);
+  }
+
+  .section-title {
+    font-size: var(--font-size-lg);
+  }
+
+  .info-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info-icon {
+    margin-right: 0;
+    margin-bottom: var(--space-2);
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: var(--font-size-lg);
+  }
+
+  .specifications-table,
+  .temperature-table {
+    font-size: var(--font-size-xs);
+  }
+
+  .specifications-table th,
+  .specifications-table td,
+  .temperature-table th,
+  .temperature-table td {
+    padding: var(--space-1) var(--space-2);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .specifications-table,
+  .temperature-table {
+    break-inside: avoid;
+  }
+
+  .content-card {
+    border: 1px solid #000;
+    box-shadow: none;
+  }
+}
+
+/* gost-specifications.css */
+/* GOST Content */
+.gost-content {
+  padding: var(--space-8) 0;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.page-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Content Cards */
+.content-card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.section-title {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin-bottom: var(--space-4);
+  border-bottom: 2px solid var(--primary-green);
+  padding-bottom: var(--space-2);
+}
+
+.table-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: var(--font-size-base);
+  margin-bottom: var(--space-4);
+  font-weight: 500;
+}
+
+/* Tables */
+.table-container {
+  overflow-x: auto;
+  margin: var(--space-4) 0;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.specifications-table,
+.pressure-table,
+.temperature-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+  background: var(--white);
+}
+
+.specifications-table th,
+.pressure-table th,
+.temperature-table th {
+  background: var(--primary-green);
+  color: var(--white);
+  font-weight: 500;
+  padding: var(--space-3);
+  text-align: center;
+  border: 1px solid var(--dark-green);
+  white-space: nowrap;
+  text-transform: lowercase;
+}
+
+.specifications-table td,
+.pressure-table td,
+.temperature-table td {
+  padding: var(--space-3);
+  text-align: center;
+  border: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+.specifications-table tbody tr:nth-child(even),
+.pressure-table tbody tr:nth-child(even),
+.temperature-table tbody tr:nth-child(even) {
+  background: var(--light-bg);
+}
+
+.specifications-table tbody tr:hover,
+.pressure-table tbody tr:hover,
+.temperature-table tbody tr:hover {
+  background: var(--light-green);
+}
+
+/* Tables Grid for Temperature Tables */
+.tables-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--space-6);
+  margin-bottom: var(--space-4);
+}
+
+.table-card {
+  background: var(--light-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: var(--space-4);
+}
+
+/* Info Box */
+.info-box {
+  display: flex;
+  align-items: flex-start;
+  background: #e3f2fd;
+  border: 1px solid #bbdefb;
+  border-radius: 8px;
+  padding: var(--space-4);
+}
+
+.info-icon {
+  font-size: var(--font-size-lg);
+  margin-right: var(--space-3);
+  flex-shrink: 0;
+}
+
+.info-content {
+  flex: 1;
+}
+
+.info-content h3 {
+  color: var(--primary-blue);
+  margin: 0 0 var(--space-2) 0;
+  font-size: var(--font-size-lg);
+}
+
+.info-content p {
+  margin: 0 0 var(--space-2) 0;
+}
+
+.info-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Table Note */
+.table-note {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 6px;
+  padding: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.table-note p {
+  margin: 0;
+  color: #856404;
+  font-size: var(--font-size-sm);
+}
+
+/* Sections */
+.specifications-section,
+.pressure-section,
+.temperature-section,
+.additional-info {
+  margin-bottom: var(--space-6);
+}
+
+.intro-section {
+  margin-bottom: var(--space-6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gost-content {
+    padding: var(--space-6) 0;
+  }
+
+  .page-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .content-card {
+    padding: var(--space-4);
+  }
+
+  .specifications-table,
+  .pressure-table,
+  .temperature-table {
+    font-size: var(--font-size-xs);
+  }
+
+  .specifications-table th,
+  .specifications-table td,
+  .pressure-table th,
+  .pressure-table td,
+  .temperature-table th,
+  .temperature-table td {
+    padding: var(--space-2);
+  }
+
+  .section-title {
+    font-size: var(--font-size-lg);
+  }
+
+  .info-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info-icon {
+    margin-right: 0;
+    margin-bottom: var(--space-2);
+  }
+
+  .tables-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .table-card {
+    padding: var(--space-3);
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: var(--font-size-lg);
+  }
+
+  .specifications-table,
+  .pressure-table,
+  .temperature-table {
+    font-size: var(--font-size-xs);
+  }
+
+  .specifications-table th,
+  .specifications-table td,
+  .pressure-table th,
+  .pressure-table td,
+  .temperature-table th,
+  .temperature-table td {
+    padding: var(--space-1) var(--space-2);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .specifications-table,
+  .pressure-table,
+  .temperature-table {
+    break-inside: avoid;
+  }
+
+  .content-card {
+    border: 1px solid #000;
+    box-shadow: none;
+  }
+}

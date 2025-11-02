@@ -1,0 +1,338 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Заказ с сайта | Оборудование и гидравлические комплектующие</title>
+    <meta
+      name="description"
+      content="Форма заказа оборудования для РВД, гидравлических фитингов и рукавов высокого давления. Отправьте запрос онлайн."
+    />
+    <meta
+      name="keywords"
+      content="заказ РВД, форма заказа, оборудование для РВД, гидравлические фитинги, рукава высокого давления"
+    />
+    <meta name="author" content="Оборудование для производства РВД" />
+
+    <!-- SEO Meta -->
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="google-site-verification"
+      content="2gwipgjMtue_193bjyHTLF4ivt7yunKJEElbN7yJv0s"
+    />
+    <link rel="canonical" href="https://stanok-rvd.ru/order/" />
+    <link
+      rel="icon"
+      href="https://stanok-rvd.ru/media/favicon.png"
+      type="image/x-icon"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/base/reset.css" />
+    <link rel="stylesheet" href="../css/base/variables.css" />
+    <link rel="stylesheet" href="../css/components/header.css" />
+    <link rel="stylesheet" href="../css/components/navigation.css" />
+    <link rel="stylesheet" href="../css/components/footer.css" />
+    <link rel="stylesheet" href="../css/components/order.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__top">
+          <div class="contact-info">
+            <a href="tel:+89531747573" class="contact-phone"
+              >+7 (953) 174-75-73</a
+            >
+            <a href="mailto:stanok-rvd@mail.ru" class="contact-email"
+              >stanok-rvd@mail.ru</a
+            >
+          </div>
+        </div>
+
+        <div class="header__main">
+          <div class="logo-section">
+            <!-- Место для логотипа -->
+            <div class="logo-placeholder">
+              <img src="../images/logo.png" alt="Логотип" class="logo-img" />
+            </div>
+            <h1 class="logo-title">Заказ с сайта</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+      <div class="container">
+        <button class="mobile-menu-btn" aria-label="Открыть меню">☰</button>
+        <ul class="nav-list">
+          <li><a href="../" class="nav-link">О КОМПАНИИ</a></li>
+          <li>
+            <a href="../pages/certificate.html" class="nav-link">СЕРТИФИКАТЫ</a>
+          </li>
+          <li>
+            <a href="../pages/spravka.html" class="nav-link">СПРАВОЧНИК</a>
+          </li>
+          <li><a href="../pages/contact.html" class="nav-link">КОНТАКТЫ</a></li>
+          <li>
+            <a href="../pages/order.html" class="nav-link active"
+              >ЗАКАЗ С САЙТА</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs">
+      <div class="container">
+        <a href="../" class="breadcrumb-link">продукция</a>
+        <span class="breadcrumb-separator">»</span>
+        <span class="breadcrumb-current">заказ с сайта</span>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="container">
+        <div class="order-content">
+          <!-- Order Info Section -->
+          <section class="order-info-section">
+            <div class="info-cards">
+              <div class="info-card">
+                <div class="info-icon">📝</div>
+                <h3 class="info-title">Простая форма заказа</h3>
+                <p class="info-description">
+                  Заполните все поля формы для отправки запроса. Мы свяжемся с
+                  вами в ближайшее время.
+                </p>
+              </div>
+
+              <div class="info-card">
+                <div class="info-icon">⏱️</div>
+                <h3 class="info-title">Быстрый ответ</h3>
+                <p class="info-description">
+                  В течение 10-20 минут вы получите контрольное письмо с текстом
+                  вашего запроса.
+                </p>
+              </div>
+
+              <div class="info-card">
+                <div class="info-icon">🔒</div>
+                <h3 class="info-title">Конфиденциальность</h3>
+                <p class="info-description">
+                  Вся информация используется только для общения с вами и не
+                  передается третьим лицам.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Order Form Section -->
+          <section class="order-form-section">
+            <h2 class="section-title">Форма заказа</h2>
+
+            <div class="form-description">
+              <p>
+                На этой странице вы можете отправить заявку или обратиться с
+                вопросами и пожеланиями в нашу компанию. Сообщение отсылается в
+                произвольной удобной для вас форме.
+              </p>
+              <p class="warning-text">
+                <strong
+                  >Будьте внимательны при указании своего адреса электронной
+                  почты</strong
+                >
+                - на указанный адрес сегодня или в ближайший рабочий день вы
+                получите ответ от специалиста компании.
+              </p>
+              <p>Просим заполнить все поля формы.</p>
+            </div>
+
+            <form
+              action="https://stanok-rvd.ru/order/"
+              enctype="multipart/form-data"
+              method="post"
+              class="order-form"
+              id="orderForm"
+            >
+              <input type="hidden" name="kodform" value="29.10.2025" />
+              <input type="hidden" name="pageorder" value="" />
+
+              <!-- Hidden fields for spam protection -->
+              <input
+                class="hidden-field"
+                type="text"
+                name="login_form"
+                value=""
+                aria-hidden="true"
+                tabindex="-1"
+              />
+              <input
+                class="hidden-field"
+                type="text"
+                name="email_form"
+                value=""
+                aria-hidden="true"
+                tabindex="-1"
+              />
+
+              <div class="form-grid">
+                <!-- Personal Information -->
+                <div class="form-group">
+                  <label for="lad_name_form" class="form-label">
+                    Как к вам обращаться *
+                  </label>
+                  <input
+                    type="text"
+                    id="lad_name_form"
+                    name="lad_name_form"
+                    maxlength="128"
+                    class="form-input"
+                    placeholder="Ваше имя"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="lad_dolgnost_form" class="form-label">
+                    Ваша должность *
+                  </label>
+                  <input
+                    type="text"
+                    id="lad_dolgnost_form"
+                    name="lad_dolgnost_form"
+                    maxlength="128"
+                    class="form-input"
+                    placeholder="Ваша должность"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="lad_firma_form" class="form-label">
+                    Название вашей компании *
+                  </label>
+                  <input
+                    type="text"
+                    id="lad_firma_form"
+                    name="lad_firma_form"
+                    maxlength="128"
+                    class="form-input"
+                    placeholder="Название компании"
+                    required
+                  />
+                </div>
+
+                <!-- Contact Information -->
+                <div class="form-group">
+                  <label for="lad_mylo_form" class="form-label">
+                    Ваша электронная почта *
+                  </label>
+                  <input
+                    type="email"
+                    id="lad_mylo_form"
+                    name="lad_mylo_form"
+                    maxlength="128"
+                    class="form-input"
+                    placeholder="example@mail.ru"
+                    required
+                  />
+                  <div class="form-hint">
+                    На этот адрес придет подтверждение заказа
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="lad_phon_form" class="form-label">
+                    Ваш телефон *
+                  </label>
+                  <input
+                    type="tel"
+                    id="lad_phon_form"
+                    name="lad_phon_form"
+                    maxlength="128"
+                    class="form-input"
+                    placeholder="+7 (XXX) XXX-XX-XX"
+                    required
+                  />
+                  <div class="form-hint">
+                    Формат: (код города) номер телефона
+                  </div>
+                </div>
+
+                <!-- Message -->
+                <div class="form-group full-width">
+                  <label for="lad_text_form" class="form-label">
+                    Текст запроса *
+                  </label>
+                  <textarea
+                    id="lad_text_form"
+                    name="lad_text_form"
+                    rows="8"
+                    class="form-textarea"
+                    placeholder="Опишите ваш запрос, укажите интересующую продукцию, технические требования или задайте вопросы..."
+                    required
+                  ></textarea>
+                  <div class="form-hint">
+                    Опишите подробно ваш запрос для более точного ответа
+                  </div>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="form-actions">
+                <button type="submit" class="submit-button">
+                  <span class="button-text">Отправить запрос</span>
+                  <span class="button-icon">📨</span>
+                </button>
+
+                <div class="form-note">
+                  Нажимая кнопку, вы соглашаетесь с обработкой персональных
+                  данных
+                </div>
+              </div>
+            </form>
+
+            <div class="privacy-notice">
+              <p>
+                Вся переданная вами информация используется только для общения с
+                вами, не публикуется и не передается третьим лицам.
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="../images/logo.png" alt="Логотип компании" class="footer-logo-img" />
+          </div>
+          <div class="footer-nav">
+            <a href="../" class="footer-link">Главная</a>
+            <a href="../pages/certificate.html" class="footer-link"
+              >Сертификаты</a
+            >
+            <a href="../pages/spravka.html" class="footer-link">Справочник</a>
+            <a href="../pages/contact.html" class="footer-link">Контакты</a>
+            <a href="../pages/order.html" class="footer-link">Заказ с сайта</a>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          Copyright © 2011-2025. Оборудование для производства РВД
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/components/navigation.js"></script>
+    <script src="../js/components/order.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

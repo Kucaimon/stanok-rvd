@@ -1,0 +1,278 @@
+/* Sewer Hoses Page Styles */
+.breadcrumbs {
+  background: var(--light-bg);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: var(--font-size-sm);
+}
+
+.breadcrumb-link {
+  color: var(--primary-green);
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: lowercase;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-link:hover {
+  color: var(--dark-green);
+}
+
+.breadcrumb-separator {
+  color: var(--metal-light);
+  margin: 0 var(--space-2);
+}
+
+.breadcrumb-current {
+  color: var(--metal-dark);
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+.sewer-hoses-content {
+  padding: var(--space-8) 0;
+}
+
+/* Main Title Section */
+.main-title-section {
+  text-align: center;
+  margin-bottom: var(--space-6);
+  padding: var(--space-6);
+  background: linear-gradient(135deg, var(--light-bg) 0%, var(--white) 100%);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.main-title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--industrial-gray);
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Description Section */
+.description-section {
+  margin-bottom: var(--space-8);
+}
+
+.description-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.description-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.description-text {
+  line-height: 1.7;
+  color: var(--metal-dark);
+}
+
+.description-text a {
+  color: var(--primary-green);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.description-text a:hover {
+  color: var(--dark-green);
+  text-decoration: underline;
+}
+
+.features-list {
+  margin-top: var(--space-4);
+}
+
+.feature-item {
+  margin-bottom: var(--space-2);
+  padding: var(--space-2);
+  background: var(--light-bg);
+  border-radius: 6px;
+  border-left: 3px solid var(--primary-green);
+}
+
+/* Options Section */
+.options-section {
+  margin-bottom: var(--space-8);
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.options-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.options-text h3 {
+  color: var(--industrial-gray);
+  margin-bottom: var(--space-4);
+  font-size: var(--font-size-lg);
+}
+
+.options-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.options-list li {
+  padding: var(--space-2) 0;
+  padding-left: var(--space-4);
+  position: relative;
+  margin-bottom: var(--space-2);
+}
+
+.options-list li:before {
+  content: "•";
+  color: var(--primary-green);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Specifications Section */
+.specifications-section {
+  margin-bottom: var(--space-8);
+}
+
+.section-title {
+  text-align: center;
+  color: var(--industrial-gray);
+  margin-bottom: var(--space-6);
+  font-size: var(--font-size-lg);
+}
+
+.specifications-table {
+  overflow-x: auto;
+  background: var(--white);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.specifications-table table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.specifications-table th,
+.specifications-table td {
+  padding: var(--space-3);
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+.specifications-table th {
+  background: var(--light-bg);
+  font-weight: 600;
+  color: var(--industrial-gray);
+}
+
+.specifications-table tbody tr:nth-child(even) {
+  background: var(--light-bg);
+}
+
+.specifications-table tbody tr:hover {
+  background: rgba(76, 175, 80, 0.05);
+}
+
+/* Applications Section */
+.applications-section {
+  margin-bottom: var(--space-8);
+}
+
+.applications-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.applications-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.applications-text h3 {
+  color: var(--industrial-gray);
+  margin-bottom: var(--space-4);
+  font-size: var(--font-size-lg);
+}
+
+.applications-text p {
+  margin-bottom: var(--space-4);
+  line-height: 1.7;
+  color: var(--metal-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .description-grid,
+  .options-grid,
+  .applications-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .main-title {
+    font-size: var(--font-size-base);
+  }
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs {
+    padding: var(--space-2) 0;
+    font-size: var(--font-size-xs);
+  }
+
+  .sewer-hoses-content {
+    padding: var(--space-6) 0;
+  }
+
+  .main-title-section {
+    padding: var(--space-4);
+    margin-bottom: var(--space-4);
+  }
+
+  .section-title {
+    font-size: var(--font-size-base);
+  }
+
+  .specifications-table th,
+  .specifications-table td {
+    padding: var(--space-2);
+    font-size: var(--font-size-xs);
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: var(--font-size-sm);
+  }
+
+  .feature-item {
+    font-size: var(--font-size-xs);
+  }
+
+  .options-text h3,
+  .applications-text h3 {
+    font-size: var(--font-size-base);
+  }
+}

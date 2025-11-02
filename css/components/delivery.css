@@ -1,0 +1,213 @@
+/* Delivery Section Styles */
+.delivery-section {
+  margin: var(--space-12) 0 var(--space-8);
+  padding: var(--space-10) var(--space-6);
+  background: linear-gradient(135deg, var(--green-50) 0%, var(--white) 100%);
+  border-radius: 16px;
+  border: 2px solid var(--primary-green);
+  box-shadow: var(--shadow-green);
+}
+
+.delivery-header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.delivery-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--industrial-gray);
+  margin-bottom: var(--space-4);
+  line-height: 1.3;
+  position: relative;
+  display: inline-block;
+}
+
+.delivery-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--primary-green);
+  border-radius: 2px;
+}
+
+.delivery-description {
+  font-size: var(--font-size-base);
+  color: var(--metal-dark);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.delivery-partners {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-6);
+  align-items: stretch;
+  justify-items: center;
+  padding: var(--space-6) 0;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.delivery-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+  background: var(--white);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 480px;
+  min-height: 140px;
+  text-decoration: none;
+  gap: var(--space-4);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.delivery-logo:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-green-lg);
+  border-color: var(--primary-green);
+  background: linear-gradient(135deg, var(--white) 0%, var(--green-50) 100%);
+}
+
+.delivery-logo img {
+  max-width: 180px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  filter: grayscale(30%);
+  opacity: 1;
+  transition: all 0.3s ease;
+  display: block;
+  flex-shrink: 0;
+  background: var(--white);
+  padding: var(--space-3);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin: 0 auto;
+  align-self: center;
+}
+
+.delivery-logo:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+  border-color: var(--primary-green);
+  box-shadow: 0 2px 8px var(--green-shadow);
+}
+
+.delivery-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--industrial-gray);
+  text-align: center;
+  line-height: 1.5;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+  width: 100%;
+}
+
+.delivery-logo:hover .delivery-name {
+  color: var(--dark-green);
+  font-weight: 700;
+}
+
+/* Если изображение не загрузилось, оно будет скрыто через JS */
+.delivery-logo img[style*="display: none"] + .delivery-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark-green);
+  text-align: center;
+  width: 100%;
+}
+
+/* Если изображение скрыто, увеличиваем текст */
+.delivery-logo:has(img[style*="display: none"]) .delivery-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark-green);
+  text-align: center;
+  width: 100%;
+  margin-top: 0;
+}
+
+/* Показываем placeholder для загрузки */
+.delivery-logo img:not([src]) {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .delivery-section {
+    margin: var(--space-8) 0;
+    padding: var(--space-8) var(--space-4);
+  }
+
+  .delivery-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .delivery-description {
+    font-size: var(--font-size-sm);
+    padding: 0;
+  }
+
+  .delivery-partners {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    padding: var(--space-2) 0;
+  }
+
+  .delivery-logo {
+    min-height: 120px;
+    padding: var(--space-5);
+    gap: var(--space-3);
+    flex-direction: column;
+  }
+
+  .delivery-logo img {
+    width: 140px;
+    height: 65px;
+  }
+
+  .delivery-name {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .delivery-partners {
+    grid-template-columns: 1fr;
+  }
+
+  .delivery-logo {
+    max-width: 100%;
+    min-height: 110px;
+    padding: var(--space-4);
+    flex-direction: column;
+  }
+
+  .delivery-logo img {
+    width: 130px;
+    height: 60px;
+  }
+
+  .delivery-name {
+    font-size: 13px;
+  }
+}
+

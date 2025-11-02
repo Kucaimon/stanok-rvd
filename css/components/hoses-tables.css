@@ -1,0 +1,303 @@
+/* Product Description Styles */
+.product-description {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: var(--space-8);
+  margin-bottom: var(--space-8);
+  line-height: 1.7;
+}
+
+.product-description > p {
+  margin-bottom: var(--space-6);
+  font-size: var(--font-size-base);
+  color: var(--industrial-gray);
+}
+
+.product-features {
+  margin: var(--space-6) 0;
+  padding: var(--space-5);
+  background: var(--light-bg);
+  border-radius: 8px;
+}
+
+.product-features p {
+  margin-bottom: var(--space-3);
+  font-weight: 600;
+  color: var(--industrial-gray);
+}
+
+.product-features ul {
+  list-style: disc;
+  padding-left: var(--space-6);
+  margin: 0;
+}
+
+.product-features li {
+  margin-bottom: var(--space-2);
+  line-height: 1.6;
+}
+
+.product-image {
+  text-align: center;
+  margin: var(--space-6) 0;
+  padding: var(--space-4) 0;
+}
+
+.product-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.specifications {
+  margin: var(--space-6) 0;
+}
+
+.specifications h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--primary-green);
+  margin-bottom: var(--space-4);
+}
+
+.product-recommendations {
+  margin: var(--space-6) 0;
+  padding: var(--space-5);
+  background: var(--light-bg);
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-green);
+}
+
+.product-recommendations p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.product-recommendations a {
+  color: var(--primary-green);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.product-recommendations a:hover {
+  color: var(--dark-green);
+  text-decoration: underline;
+}
+
+/* Hoses tables specific styles */
+.hoses-table-container {
+  overflow-x: auto;
+  margin: var(--space-8) 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.hoses-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  font-size: 0.9rem;
+  min-width: 800px;
+}
+
+.hoses-table th {
+  background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  padding: var(--space-4);
+  border: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+}
+
+.hoses-table td {
+  padding: var(--space-3);
+  text-align: center;
+  border: 1px solid var(--border-color);
+  transition: background-color 0.2s;
+}
+
+.hoses-table tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.hoses-table tbody tr:hover {
+  background: #e0f2fe;
+}
+
+.hoses-table tbody tr:nth-child(even):hover {
+  background: #dbeafe;
+}
+
+/* Header rows styling */
+.hoses-table thead tr:first-child th {
+  background: linear-gradient(135deg, var(--dark-green), var(--primary-green));
+  font-size: 0.95rem;
+  padding: var(--space-4);
+}
+
+.hoses-table thead tr:last-child th {
+  background: rgba(255, 255, 255, 0.1);
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+/* Rowspan cells styling */
+.hoses-table td[rowspan],
+.hoses-table th[rowspan] {
+  background: var(--light-bg);
+  font-weight: 600;
+  color: var(--primary-green);
+  vertical-align: middle;
+  border-right: 2px solid var(--primary-green);
+}
+
+/* Specific column styling */
+.hoses-table td:nth-child(1),  /* Type column */
+.hoses-table td:nth-child(2),  /* DN column */
+.hoses-table td:nth-child(3),  /* mm column */
+.hoses-table td:nth-child(4) {
+  /* inch column */
+  font-weight: 500;
+  background: #f8fafc;
+}
+
+.hoses-table td:nth-child(5),  /* Outer diameter */
+.hoses-table td:nth-child(6),  /* Working pressure */
+.hoses-table td:nth-child(7),  /* Burst pressure */
+.hoses-table td:nth-child(8) {
+  /* Burst pressure Psi */
+  font-weight: 600;
+  color: #dc2626;
+}
+
+.hoses-table td:nth-child(9),  /* Bend radius */
+.hoses-table td:nth-child(10) {
+  /* Weight */
+  font-weight: 500;
+  color: #059669;
+}
+
+/* Pressure values emphasis */
+.hoses-table .pressure-high {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+.hoses-table .pressure-medium {
+  color: #d97706;
+  font-weight: 600;
+}
+
+.hoses-table .pressure-low {
+  color: #059669;
+  font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .product-description {
+    padding: var(--space-6);
+    margin-bottom: var(--space-6);
+  }
+
+  .product-image {
+    margin: var(--space-4) 0;
+    padding: var(--space-3) 0;
+  }
+
+  .product-image img {
+    max-height: 300px;
+  }
+
+  .product-features,
+  .product-recommendations {
+    margin: var(--space-4) 0;
+    padding: var(--space-4);
+  }
+
+  .specifications {
+    margin: var(--space-4) 0;
+  }
+
+  .hoses-table {
+    font-size: 0.8rem;
+    min-width: 700px;
+  }
+
+  .hoses-table th,
+  .hoses-table td {
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .hoses-table-container {
+    margin: var(--space-4) 0;
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid var(--border-color);
+  }
+}
+
+@media (max-width: 480px) {
+  .product-description {
+    padding: var(--space-4);
+    margin-bottom: var(--space-4);
+  }
+
+  .product-image {
+    margin: var(--space-3) 0;
+    padding: var(--space-2) 0;
+  }
+
+  .product-image img {
+    max-height: 250px;
+  }
+
+  .product-features,
+  .product-recommendations {
+    margin: var(--space-3) 0;
+    padding: var(--space-3);
+  }
+
+  .specifications {
+    margin: var(--space-3) 0;
+  }
+
+  .specifications h3 {
+    font-size: var(--font-size-base);
+  }
+
+  .hoses-table {
+    font-size: 0.75rem;
+    min-width: 600px;
+  }
+
+  .hoses-table th,
+  .hoses-table td {
+    padding: var(--space-2);
+  }
+}
+
+/* Print styles */
+@media print {
+  .hoses-table {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+
+  .hoses-table th {
+    background: #f0f0f0 !important;
+    color: #000 !important;
+    border: 1px solid #000;
+  }
+
+  .hoses-table td {
+    border: 1px solid #000;
+  }
+}

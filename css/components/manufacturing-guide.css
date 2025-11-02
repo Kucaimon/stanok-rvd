@@ -1,0 +1,335 @@
+/* manufacturing-guide.css */
+/* Breadcrumbs */
+.breadcrumbs {
+  background: var(--light-bg);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: var(--font-size-sm);
+}
+
+.breadcrumb-link {
+  color: var(--primary-green);
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: lowercase;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-link:hover {
+  color: var(--dark-green);
+}
+
+.breadcrumb-separator {
+  color: var(--metal-light);
+  margin: 0 var(--space-2);
+}
+
+.breadcrumb-current {
+  color: var(--metal-dark);
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+/* Manufacturing Content */
+.manufacturing-content {
+  padding: var(--space-8) 0;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.page-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin: 0 0 var(--space-2) 0;
+  line-height: 1.2;
+}
+
+.page-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--industrial-gray);
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* Content Cards */
+.content-card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.section-title {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin-bottom: var(--space-5);
+  border-bottom: 2px solid var(--primary-green);
+  padding-bottom: var(--space-2);
+}
+
+/* Warning Box */
+.warning-box {
+  display: flex;
+  align-items: flex-start;
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 8px;
+  padding: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.warning-box.warning {
+  background: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.warning-icon {
+  font-size: var(--font-size-lg);
+  margin-right: var(--space-3);
+  flex-shrink: 0;
+}
+
+.warning-content {
+  flex: 1;
+}
+
+.warning-content strong {
+  color: #856404;
+}
+
+.warning-box.warning .warning-content strong {
+  color: #721c24;
+}
+
+/* Process Steps */
+.process-step {
+  margin-bottom: var(--space-6);
+}
+
+.step-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--industrial-gray);
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: center;
+}
+
+.step-title::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--primary-green);
+  border-radius: 50%;
+  margin-right: var(--space-3);
+}
+
+/* Checklist Grid */
+.checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  padding: var(--space-2);
+  background: var(--light-bg);
+  border-radius: 6px;
+}
+
+.check-icon {
+  color: var(--primary-green);
+  font-weight: bold;
+  margin-right: var(--space-2);
+  flex-shrink: 0;
+}
+
+/* Lists */
+.protection-list,
+.prohibited-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-4) 0;
+}
+
+.protection-list li,
+.prohibited-list li {
+  padding: var(--space-2) 0;
+  padding-left: var(--space-5);
+  position: relative;
+}
+
+.protection-list li::before {
+  content: "🛡️";
+  position: absolute;
+  left: 0;
+}
+
+.prohibited-list li::before {
+  content: "❌";
+  position: absolute;
+  left: 0;
+}
+
+/* Storage Guidelines */
+.storage-guidelines {
+  margin: var(--space-6) 0;
+}
+
+.guideline-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--industrial-gray);
+  margin-bottom: var(--space-4);
+}
+
+.guideline-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.guideline-card {
+  background: var(--light-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: var(--space-4);
+}
+
+.guideline-card h4 {
+  color: var(--primary-green);
+  margin: 0 0 var(--space-2) 0;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+}
+
+/* Factors Grid */
+.factors-grid {
+  margin-top: var(--space-4);
+}
+
+.factors-negative h4 {
+  color: #dc3545;
+  margin-bottom: var(--space-3);
+  font-size: var(--font-size-base);
+}
+
+.factors-negative ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-2);
+}
+
+.factors-negative li {
+  padding: var(--space-2);
+  background: #f8f9fa;
+  border-radius: 4px;
+  border-left: 3px solid #dc3545;
+}
+
+/* Quality Check Steps */
+.check-steps {
+  margin-top: var(--space-4);
+}
+
+.check-step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: var(--space-4);
+  padding: var(--space-4);
+  background: var(--light-bg);
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-green);
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--primary-green);
+  color: var(--white);
+  border-radius: 50%;
+  font-weight: 600;
+  margin-right: var(--space-4);
+  flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .breadcrumbs {
+    padding: var(--space-2) 0;
+    font-size: var(--font-size-xs);
+  }
+
+  .manufacturing-content {
+    padding: var(--space-6) 0;
+  }
+
+  .page-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .page-subtitle {
+    font-size: var(--font-size-base);
+  }
+
+  .content-card {
+    padding: var(--space-4);
+  }
+
+  .checklist-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guideline-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .factors-negative ul {
+    grid-template-columns: 1fr;
+  }
+
+  .check-step {
+    flex-direction: column;
+  }
+
+  .step-number {
+    margin-right: 0;
+    margin-bottom: var(--space-2);
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: var(--font-size-lg);
+  }
+
+  .section-title {
+    font-size: var(--font-size-lg);
+  }
+
+  .warning-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .warning-icon {
+    margin-right: 0;
+    margin-bottom: var(--space-2);
+  }
+}
