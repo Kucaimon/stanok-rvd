@@ -5,7 +5,10 @@
 ## 🌐 Просмотр сайта
 
 ### 🔗 GitHub Pages (для демонстрации):
+После включения GitHub Pages сайт будет доступен по адресу:
 **https://[ваш-username].github.io/[название-репозитория]/**
+
+**Как включить:** Settings → Pages → Source: main → Save
 
 ### 📁 Или напрямую через GitHub:
 **https://github.com/[ваш-username]/[название-репозитория]**
