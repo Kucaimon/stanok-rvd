@@ -6,7 +6,7 @@ const productsData = [
     description:
       "Ручной переносной пресс для работы в полевых условиях без электричества",
     image: "https://stanok-rvd.ru/stanki_rvd/d-hydro/sm625_small.jpg",
-    link: "d-hydro/sm_625e/",
+    link: "/stanok-rvd/pages/products/d-hydro/sm_625e/",
     specs: [
       { label: "Диапазон обжима:", value: "8-49 мм" },
       { label: "Сила сжатия:", value: "1100 кН" },
@@ -18,7 +18,7 @@ const productsData = [
     description:
       "Компактный обжимной станок для профессионального использования",
     image: "https://stanok-rvd.ru/stanki_rvd/d-hydro/sm32mc_small.jpg",
-    link: "d-hydro/sm_32cm/",
+    link: "/stanok-rvd/pages/products/d-hydro/sm_32cm/",
     specs: [
       { label: "Диапазон обжима:", value: "8-32 мм" },
       { label: "Тип кулачков:", value: "P16" },
@@ -29,7 +29,7 @@ const productsData = [
     name: "ОБЖИМНОЙ СТАНОК D-HYDRO SM-38EC",
     description: "Электрический пресс для производства и ремонта РВД",
     image: "https://stanok-rvd.ru/stanki_rvd/d-hydro/sm38ec_sc_small.jpg",
-    link: "d-hydro/sm_38ec/",
+    link: "/stanok-rvd/pages/products/d-hydro/sm_38ec/",
     specs: [
       { label: "Диапазон обжима:", value: "8-38 мм" },
       { label: "Питание:", value: "380В" },
@@ -40,7 +40,7 @@ const productsData = [
     name: "ОБЖИМНОЙ СТАНОК D-HYDRO SM-38SC",
     description: "Стационарный пресс для серийного производства РВД",
     image: "https://stanok-rvd.ru/stanki_rvd/d-hydro/sm38ec_sc_small.jpg",
-    link: "d-hydro/sm_38sc/",
+    link: "/stanok-rvd/pages/products/d-hydro/sm_38sc/",
     specs: [
       { label: "Диапазон обжима:", value: "8-38 мм" },
       { label: "Тип:", value: "Стационарный" },
@@ -51,7 +51,7 @@ const productsData = [
     name: "ЗАЧИСТНОЙ СТАНОК D-HYDRO HS-50",
     description: "Для снятия наружного и внутреннего слоя резины РВД",
     image: "https://stanok-rvd.ru/stanki_rvd/d-hydro/hs50_small.jpg",
-    link: "d-hydro/hs_50/",
+    link: "/stanok-rvd/pages/products/d-hydro/hs_50/",
     specs: [
       { label: "Тип:", value: "Зачистной" },
       { label: "Назначение:", value: "4SP, 4SH, R13, R15" },
@@ -62,7 +62,7 @@ const productsData = [
     name: "ОТРЕЗНОЙ СТАНОК D-HYDRO CM-70/CM-100",
     description: "Для резки РВД всех типов и диаметров",
     image: "https://stanok-rvd.ru/stanki_rvd/d-hydro/cm70_small.jpg",
-    link: "d-hydro/cm_70/",
+    link: "/stanok-rvd/pages/products/d-hydro/cm_70/",
     specs: [
       { label: "Диапазон резки:", value: "до 100 мм" },
       { label: "Тип:", value: "Отрезной" },
@@ -73,7 +73,7 @@ const productsData = [
     name: "ОБЖИМНОЙ СТАНОК D-HYDRO YL-20",
     description: "Универсальный пресс для изготовления РВД и опрессовки",
     image: "https://stanok-rvd.ru/stanki_rvd/d-hydro/yl_20_small.jpg",
-    link: "d-hydro/yl_20/",
+    link: "/stanok-rvd/pages/products/d-hydro/yl_20/",
     specs: [
       { label: "Диапазон обжима:", value: "6-20 мм" },
       { label: "Сила сжатия:", value: "200 кН" },
@@ -84,7 +84,7 @@ const productsData = [
     name: "ОБЖИМНОЙ СТАНОК D-HYDRO YL-32",
     description: "Мощный пресс для профессионального производства РВД",
     image: "https://stanok-rvd.ru/stanki_rvd/d-hydro/yl_32_small.jpg",
-    link: "d-hydro/yl_32/",
+    link: "/stanok-rvd/pages/products/d-hydro/yl_32/",
     specs: [
       { label: "Диапазон обжима:", value: "10-32 мм" },
       { label: "Сила сжатия:", value: "320 кН" },
@@ -96,7 +96,7 @@ const productsData = [
     description:
       "Изготовление и производство РВД. Опрессовка труб. Грузоподъемных тросов",
     image: "https://stanok-rvd.ru/stanki_rvd/d-hydro/yl_20s_small.jpg",
-    link: "d-hydro/yl_20s/",
+    link: "/stanok-rvd/pages/products/d-hydro/yl_20s/",
     specs: [
       { label: "Тип:", value: "Обжимной" },
       { label: "Модификация:", value: "YL-20S" },
@@ -107,7 +107,7 @@ const productsData = [
     name: "ОБЖИМНОЙ СТАНОК D-HYDRO YL-65",
     description: "Для изготовления РВД опрессовка труб грузоподъемных тросов",
     image: "https://stanok-rvd.ru/stanki_rvd/d-hydro/yl_65_small.jpg",
-    link: "d-hydro/yl_65/",
+    link: "/stanok-rvd/pages/products/d-hydro/yl_65/",
     specs: [
       { label: "Диапазон обжима:", value: "до 65 мм" },
       { label: "Тип:", value: "Обжимной" },
@@ -118,7 +118,7 @@ const productsData = [
     name: "ОБЖИМНОЙ СТАНОК D-HYDRO YL-80",
     description: "Для изготовления РВД опрессовка труб грузоподъемных тросов",
     image: "https://stanok-rvd.ru/stanki_rvd/d-hydro/yl_80_small.jpg",
-    link: "d-hydro/yl_80/",
+    link: "/stanok-rvd/pages/products/d-hydro/yl_80/",
     specs: [
       { label: "Диапазон обжима:", value: "до 80 мм" },
       { label: "Тип:", value: "Обжимной" },
@@ -129,7 +129,7 @@ const productsData = [
     name: "ЗАЧИСТНОЙ СТАНОК D-HYDRO HS-50M",
     description: "Для снятия наружного и внутреннего слоя резины РВД",
     image: "https://stanok-rvd.ru/stanki_rvd/d-hydro/hs50m_small.jpg",
-    link: "d-hydro/hs_50m/",
+    link: "/stanok-rvd/pages/products/d-hydro/hs_50m/",
     specs: [
       { label: "Тип:", value: "Зачистной" },
       { label: "Модификация:", value: "HS-50M" },

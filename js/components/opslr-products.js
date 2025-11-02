@@ -6,7 +6,7 @@ const opslrProductsData = [
     description:
       'Идеален для опрессовки гидравлических рукавов до 1" с двумя спиралями. Мобильные прессы имеют привод от ручного насоса для использования в полевых условиях.',
     image: "https://stanok-rvd.ru/media/content/opslr/h47pm.jpg",
-    link: "op/tubomatic_h47pm/",
+    link: "/stanok-rvd/pages/products/op/tubomatic_h47pm/",
     specs: [
       { label: "Тип:", value: "Мобильный пресс" },
       { label: "Диапазон:", value: 'до 1" 2 спирали' },
@@ -18,7 +18,7 @@ const opslrProductsData = [
     description:
       'Идеален для опрессовки гидравлических рукавов до 1" с двумя спиралями. Мобильные прессы для использования в полевых условиях.',
     image: "https://stanok-rvd.ru/media/content/opslr/h47e.jpg",
-    link: "op/tubomatic_h47e/",
+    link: "/stanok-rvd/pages/products/op/tubomatic_h47e/",
     specs: [
       { label: "Тип:", value: "Мобильный пресс" },
       { label: "Диапазон:", value: 'до 1" 2 спирали' },
@@ -30,7 +30,7 @@ const opslrProductsData = [
     description:
       'Идеален для опрессовки гидравлических рукавов до 1" с четырьмя спиралями. Многофункциональная машина для сервисных подразделений.',
     image: "https://stanok-rvd.ru/media/content/opslr/h47el.jpg",
-    link: "op/tubomatic_h47el/",
+    link: "/stanok-rvd/pages/products/op/tubomatic_h47el/",
     specs: [
       { label: "Тип:", value: "Многофункциональный" },
       { label: "Диапазон:", value: 'до 1" 4 спирали' },
@@ -42,7 +42,7 @@ const opslrProductsData = [
     description:
       'Идеален для опрессовки гидравлических рукавов до 1" с двумя спиралями. Многофункциональная машина для сервисных подразделений.',
     image: "https://stanok-rvd.ru/media/content/opslr/h47pi.jpg",
-    link: "op/tubomatic_h47pi/",
+    link: "/stanok-rvd/pages/products/op/tubomatic_h47pi/",
     specs: [
       { label: "Тип:", value: "Многофункциональный" },
       { label: "Диапазон:", value: 'до 1" 2 спирали' },
@@ -54,7 +54,7 @@ const opslrProductsData = [
     description:
       'Идеален для опрессовки гидравлических рукавов до 1" с шестью спиралями и 1-1/4" с четырьмя спиралями.',
     image: "https://stanok-rvd.ru/media/content/opslr/h54pm.jpg",
-    link: "op/tubomatic_h54pm/",
+    link: "/stanok-rvd/pages/products/op/tubomatic_h54pm/",
     specs: [
       { label: "Тип:", value: "Сервисный" },
       { label: "Диапазон:", value: 'до 1-1/4"' },
@@ -66,7 +66,7 @@ const opslrProductsData = [
     description:
       'Идеален для опрессовки гидравлических рукавов до 1" с шестью спиралями и 1-1/4" с четырьмя спиралями.',
     image: "https://stanok-rvd.ru/media/content/opslr/h54pi.jpg",
-    link: "op/tubomatic_h54pi/",
+    link: "/stanok-rvd/pages/products/op/tubomatic_h54pi/",
     specs: [
       { label: "Тип:", value: "Сервисный" },
       { label: "Диапазон:", value: 'до 1-1/4"' },
@@ -78,7 +78,7 @@ const opslrProductsData = [
     description:
       'Идеален для опрессовки гидравлических рукавов до 1" с шестью спиралями и 1.1/4" с четырьмя спиралями.',
     image: "https://stanok-rvd.ru/media/content/opslr/h54el.jpg",
-    link: "op/tubomatic_h54el/",
+    link: "/stanok-rvd/pages/products/op/tubomatic_h54el/",
     specs: [
       { label: "Тип:", value: "Стандартный" },
       { label: "Диапазон:", value: 'до 1.1/4"' },
@@ -90,7 +90,7 @@ const opslrProductsData = [
     description:
       'Идеален для опрессовки гидравлических рукавов до 1" с шестью спиралями и 1.1/4" с четырьмя спиралями. Имеет электронное управление.',
     image: "https://stanok-rvd.ru/media/content/opslr/h54es.jpg",
-    link: "op/tubomatic_h54es/",
+    link: "/stanok-rvd/pages/products/op/tubomatic_h54es/",
     specs: [
       { label: "Тип:", value: "Электронный" },
       { label: "Диапазон:", value: 'до 1.1/4"' },
@@ -102,7 +102,7 @@ const opslrProductsData = [
     description:
       'Идеален для опрессовки гидравлических рукавов до 1" с шестью спиралями и 1.1/4" четырьмя спиралями. Максимальный диаметр оплеточного рукава с одной оплеткой 1.1/2".',
     image: "https://stanok-rvd.ru/media/content/opslr/H83EEL.jpg",
-    link: "op/tubomatic_h83eel/",
+    link: "/stanok-rvd/pages/products/op/tubomatic_h83eel/",
     specs: [
       { label: "Тип:", value: "Современный" },
       { label: "Диапазон:", value: 'до 1.1/2"' },
@@ -114,7 +114,7 @@ const opslrProductsData = [
     description:
       'Идеален для опрессовки гидравлических рукавов до 1" с шестью спиралями и 1.1/2" четырьмя спиралями. Максимальный диаметр оплеточного рукава с одной оплеткой 2".',
     image: "https://stanok-rvd.ru/media/content/opslr/H88EL.jpg",
-    link: "op/tubomatic_h88el/",
+    link: "/stanok-rvd/pages/products/op/tubomatic_h88el/",
     specs: [
       { label: "Тип:", value: "Профессиональный" },
       { label: "Диапазон:", value: 'до 2"' },
@@ -126,7 +126,7 @@ const opslrProductsData = [
     description:
       'Идеален для опрессовки гидравлических рукавов до 1" с шестью спиралями и 1.1/2" четырьмя спиралями. Максимальный диаметр оплеточного рукава с одной оплеткой 2". Имеет электронное управление.',
     image: "https://stanok-rvd.ru/media/content/opslr/H88ES.jpg",
-    link: "op/tubomatic_h88es/",
+    link: "/stanok-rvd/pages/products/op/tubomatic_h88es/",
     specs: [
       { label: "Тип:", value: "Электронный" },
       { label: "Диапазон:", value: 'до 2"' },
