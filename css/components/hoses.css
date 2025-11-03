@@ -1,4 +1,4 @@
-/* Hoses Page Styles */
+/* Hoses Page Styles - Унифицированные с products.css */
 .breadcrumbs {
   background: var(--light-bg);
   padding: var(--space-3) 0;
@@ -63,76 +63,8 @@
   gap: var(--space-6);
 }
 
-.hose-card {
-  background: var(--white);
-  border: 2px solid var(--border-color);
-  border-radius: 12px;
-  padding: var(--space-6);
-  text-align: center;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.hose-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--primary-green);
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-
-.hose-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border-color: var(--primary-green);
-}
-
-.hose-card:hover::before {
-  transform: scaleX(1);
-}
-
-.hose-image {
-  width: 100%;
-  max-width: 200px;
-  height: 150px;
-  object-fit: cover;
-  margin-bottom: var(--space-4);
-  border-radius: 4px;
-  border: 1px solid var(--border-color);
-}
-
-.hose-title {
-  font-size: var(--font-size-lg);
-  font-weight: 600;
-  color: var(--industrial-gray);
-  margin-bottom: var(--space-3);
-  line-height: 1.3;
-}
-
-.hose-link {
-  display: inline-block;
-  background: var(--primary-green);
-  color: var(--white);
-  padding: var(--space-2) var(--space-4);
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  font-size: var(--font-size-xs);
-  letter-spacing: 0.5px;
-}
-
-.hose-link:hover {
-  background: var(--dark-green);
-  color: var(--white);
-  transform: translateY(-2px);
-}
+/* Карточки рукавов теперь используют product-card классы */
+/* Все стили наследуются из products.css */
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -153,23 +85,11 @@
   .description-text {
     padding: var(--space-4);
   }
-
-  .hose-card {
-    padding: var(--space-4);
-  }
 }
 
 @media (max-width: 480px) {
-  .hose-card {
-    padding: var(--space-3);
-  }
-
-  .hose-image {
-    height: 120px;
-    margin-bottom: var(--space-3);
-  }
-
-  .hose-title {
-    font-size: var(--font-size-base);
+  .hoses-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
   }
 }

@@ -53,14 +53,17 @@ class HosesPage {
     hosesGrid.innerHTML = this.hoses
       .map(
         (hose) => `
-            <div class="hose-card">
-                <a href="${hose.link}" title="${hose.description}">
-                    <img src="${hose.image}" alt="${hose.title}" class="hose-image" loading="lazy">
-                </a>
-                <h3 class="hose-title">${hose.title}</h3>
-                <a href="${hose.link}" class="hose-link" title="${hose.description}">
-                    Подробнее
-                </a>
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="${hose.image}" alt="${hose.title}" class="product-image" loading="lazy">
+                </div>
+                <div class="product-card__content">
+                    <h3 class="product-card__title">${hose.title}</h3>
+                    <p class="product-card__description">${hose.description}</p>
+                    <a href="${hose.link}" class="product-card__button" title="${hose.description}">
+                        Подробнее
+                    </a>
+                </div>
             </div>
         `
       )

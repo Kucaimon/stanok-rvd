@@ -93,13 +93,15 @@ class CuttingDisksPage {
       .map(
         (item) => `
             <div class="disk-card">
-                <a href="${item.link}" title="${item.title}">
-                    <img src="${item.image}" alt="${item.title}" class="disk-image" loading="lazy">
-                </a>
-                <h3 class="disk-title">${item.title}</h3>
-                <a href="${item.link}" class="disk-link">
-                    Подробнее
-                </a>
+                <div class="product-card__image">
+                    <img src="${item.image}" alt="${item.title}" class="product-image" loading="lazy">
+                </div>
+                <div class="product-card__content">
+                    <h3 class="product-card__title">${item.title}</h3>
+                    <a href="${item.link}" class="product-card__button">
+                        Подробнее
+                    </a>
+                </div>
             </div>
         `
       )
@@ -111,17 +113,17 @@ class CuttingDisksPage {
 
     cards.forEach((card) => {
       card.addEventListener("mouseenter", () => {
-        card.style.transform = "translateY(-10px)";
+        card.style.transform = "translateY(-5px)";
       });
 
       card.addEventListener("mouseleave", () => {
-        card.style.transform = "translateY(-8px)";
+        card.style.transform = "translateY(0)";
       });
     });
   }
 
   initImageZoom() {
-    const images = document.querySelectorAll(".disk-image");
+    const images = document.querySelectorAll(".disk-card .product-image");
 
     images.forEach((img) => {
       img.style.cursor = "zoom-in";

@@ -107,33 +107,19 @@ class ProductsGrid {
       .map(
         (product) => `
                     <div class="product-card">
-                        ${
-                          product.image
-                            ? `
-                            <a href="${product.link}" title="${product.title}">
-                                <img src="${product.image}" alt="${product.title}" class="product-image" loading="lazy">
-                            </a>
-                        `
-                            : product.icon
-                            ? `
-                            <a href="${product.link}" title="${product.title}">
-                                <div class="product-icon">${product.icon}</div>
-                            </a>
-                        `
-                            : ""
-                        }
-                        <div class="product-info" ${
-                          !product.image && !product.icon
-                            ? 'style="text-align: center; padding: 2rem 1.5rem"'
-                            : ""
-                        }>
-                            <h3 class="product-title">${product.title}</h3>
-                            <p class="product-description">${
-                              product.description
-                            }</p>
-                            <a href="${
-                              product.link
-                            }" class="product-link">Подробнее</a>
+                        <div class="product-card__image">
+                            ${
+                              product.image
+                                ? `<img src="${product.image}" alt="${product.title}" class="product-image" loading="lazy">`
+                                : product.icon
+                                ? `<div class="product-icon">${product.icon}</div>`
+                                : ""
+                            }
+                        </div>
+                        <div class="product-card__content">
+                            <h3 class="product-card__title">${product.title}</h3>
+                            <p class="product-card__description">${product.description}</p>
+                            <a href="${product.link}" class="product-card__button">Подробнее</a>
                         </div>
                     </div>
                 `

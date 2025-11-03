@@ -1,4 +1,5 @@
-/* cutting-disks.css */
+/* cutting-disks.css - УНИФИЦИРОВАННЫЕ КАРТОЧКИ ДИСКОВ */
+
 /* Breadcrumbs */
 .breadcrumbs {
   background: var(--light-bg);
@@ -90,23 +91,17 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--space-6);
   justify-items: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
+/* ============================================
+   КАРТОЧКИ ДИСКОВ - Используют product-card структуру
+   ============================================ */
 .disk-card {
-  background: var(--white);
-  border: 2px solid var(--border-color);
-  border-radius: 12px;
-  padding: var(--space-5);
-  text-align: center;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
+  /* Наследует все стили от .product-card */
   max-width: 280px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  min-height: 320px;
+  border: 2px solid var(--border-color);
 }
 
 .disk-card::before {
@@ -119,6 +114,7 @@
   background: var(--primary-green);
   transform: scaleX(0);
   transition: transform 0.3s ease;
+  z-index: 1;
 }
 
 .disk-card:hover {
@@ -129,66 +125,6 @@
 
 .disk-card:hover::before {
   transform: scaleX(1);
-}
-
-.disk-card > a {
-  display: block;
-  margin-bottom: var(--space-5);
-  text-decoration: none;
-}
-
-.disk-image {
-  width: 100%;
-  max-width: 180px;
-  height: 140px;
-  object-fit: contain;
-  border-radius: 4px;
-  padding: var(--space-2);
-  background: var(--light-bg);
-  transition: transform 0.3s ease;
-  display: block;
-  margin: 0 auto;
-}
-
-.disk-card:hover .disk-image {
-  transform: scale(1.05);
-}
-
-.disk-title {
-  font-size: var(--font-size-sm);
-  font-weight: 600;
-  color: var(--industrial-gray);
-  margin: var(--space-4) 0 var(--space-4) 0;
-  line-height: 1.4;
-  display: block;
-  padding: 0;
-  text-align: center;
-  min-height: auto;
-}
-
-.disk-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--primary-green);
-  color: var(--white);
-  padding: var(--space-2) var(--space-5);
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  font-size: var(--font-size-xs);
-  letter-spacing: 0.5px;
-  margin-top: auto;
-  min-height: 36px;
-}
-
-.disk-link:hover {
-  background: var(--dark-green);
-  color: var(--white);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
 }
 
 /* Category Header for product pages */
@@ -349,7 +285,11 @@
   box-shadow: var(--shadow-green);
 }
 
-/* Responsive Design */
+/* ============================================
+   АДАПТИВНЫЕ СТИЛИ ДЛЯ КАРТОЧЕК ДИСКОВ
+   ============================================ */
+
+/* Планшеты (1024px и меньше) */
 @media (max-width: 1024px) {
   .disks-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -361,6 +301,7 @@
   }
 }
 
+/* Планшеты (768px и меньше) */
 @media (max-width: 768px) {
   .breadcrumbs {
     padding: var(--space-2) 0;
@@ -372,7 +313,7 @@
   }
 
   .disks-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: var(--space-4);
   }
 
@@ -387,21 +328,7 @@
   }
 
   .disk-card {
-    padding: var(--space-4);
     max-width: 250px;
-  }
-
-  .disk-image {
-    max-width: 150px;
-    height: 120px;
-  }
-
-  .disk-card > a {
-    margin-bottom: var(--space-4);
-  }
-
-  .disk-title {
-    margin: var(--space-3) 0 var(--space-4) 0;
   }
 
   .category-header {
@@ -455,36 +382,21 @@
   }
 }
 
+/* Мобильные устройства (480px и меньше) */
 @media (max-width: 480px) {
   .disks-grid {
     grid-template-columns: 1fr;
     justify-items: center;
+    gap: var(--space-3);
   }
 
   .disk-card {
-    padding: var(--space-3);
     max-width: 280px;
-  }
-
-  .disk-image {
-    height: 100px;
-  }
-
-  .disk-card > a {
-    margin-bottom: var(--space-3);
-  }
-
-  .disk-title {
-    font-size: var(--font-size-sm);
-  }
-
-  .disk-link {
-    padding: var(--space-2) var(--space-4);
-    font-size: var(--font-size-xs);
   }
 
   .page-title {
     font-size: var(--font-size-base);
+    padding: var(--space-3);
   }
 
   .category-header {
