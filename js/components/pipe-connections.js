@@ -5,21 +5,21 @@ class PipeConnectionsPage {
       {
         title: "СОЕДИНЕНИЕ DIN2353 LR/SR ПРЯМОЕ",
         image: "https://stanok-rvd.ru/trubnye_soedineniya/truba.jpg",
-        link: "/stanok-rvd/pages/products/pipe-connections/pryamoye.html",
+        link: "../pipe-connections/pryamoye.html",
         description:
           "ТРУБНОЕ СОЕДИНЕНИЕ DIN2353 LR/SR, ISO 8434-1. ПРЯМОЕ Rastelli Raccordi, Cast, VOSS, Parker, FOR S.p.a.",
       },
       {
         title: "СОЕДИНЕНИЕ DIN2353 LR/SR УГОЛЬНИК",
         image: "https://stanok-rvd.ru/trubnye_soedineniya/truba90.jpg",
-        link: "/stanok-rvd/pages/products/pipe-connections/uglovoe.html",
+        link: "../pipe-connections/uglovoe.html",
         description:
           "ТРУБНОЕ СОЕДИНЕНИЕ DIN2353 LR/SR, ISO 8434-1. УГОЛЬНИК Rastelli Raccordi, Cast, VOSS, Parker, FOR S.p.a.",
       },
       {
         title: "СОЕДИНЕНИЕ DIN2353 LR/SR ТРОЙНИК",
         image: "https://stanok-rvd.ru/trubnye_soedineniya/truba_troinik.jpg",
-        link: "/stanok-rvd/pages/products/pipe-connections/troynik.html",
+        link: "../pipe-connections/troynik.html",
         description:
           "ТРУБНОЕ СОЕДИНЕНИЕ DIN2353 LR/SR, ISO 8434-1. ТРОЙНИК Rastelli Raccordi, Cast, VOSS, Parker, FOR S.p.a.",
       },
@@ -53,6 +53,13 @@ class PipeConnectionsPage {
                     <img src="${item.image}" alt="${item.title}" class="connection-image" loading="lazy">
                 </a>
                 <h3 class="connection-title">${item.title}</h3>
+                <p class="product-card__description">${item.description}</p>
+                <div class="product-card__specs">
+                    <div class="spec-item">
+                        <span class="spec-label">Стандарт:</span>
+                        <span class="spec-value">${item.title.match(/DIN\s*\d+/)?.[0] || 'DIN 2353'}</span>
+                    </div>
+                </div>
                 <a href="${item.link}" class="connection-link" title="${item.description}">
                     Подробнее
                 </a>

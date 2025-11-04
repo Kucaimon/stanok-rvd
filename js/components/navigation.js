@@ -25,16 +25,16 @@ class Navigation {
 
   toggleMobileMenu() {
     this.navList.classList.toggle("nav-list--active");
-    this.mobileMenuBtn.textContent = this.navList.classList.contains(
+    this.mobileMenuBtn.innerHTML = this.navList.classList.contains(
       "nav-list--active"
     )
-      ? "✕"
-      : "☰";
+      ? "&#10006;"
+      : "&#9776;";
   }
 
   closeMobileMenu() {
     this.navList.classList.remove("nav-list--active");
-    this.mobileMenuBtn.textContent = "☰";
+    this.mobileMenuBtn.innerHTML = "&#9776;";
   }
 }
 

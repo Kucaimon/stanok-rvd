@@ -6,7 +6,7 @@ const samwayProductsData = [
     description:
       "Профессиональный обжимной станок для производства РВД. Идеально подходит для сервисных центров и небольших производств.",
     image: "https://stanok-rvd.ru/stanki_rvd/samway/titul_p16hp.jpg",
-    link: "/stanok-rvd/pages/products/samway/p16hp_samway/",
+    link: "../samway/p16hp_samway/",
     specs: [
       { label: "Тип:", value: "Обжимной" },
       { label: "Модель:", value: "P16HP" },
@@ -19,7 +19,7 @@ const samwayProductsData = [
     description:
       "Мощный обжимной станок для профессионального использования. Обеспечивает высокую точность обжима РВД.",
     image: "https://stanok-rvd.ru/stanki_rvd/samway/titul_p20hp_small.png",
-    link: "/stanok-rvd/pages/products/samway/p20hp_samway/",
+    link: "../samway/p20hp_samway/",
     specs: [
       { label: "Тип:", value: "Обжимной" },
       { label: "Модель:", value: "P20HP" },
@@ -32,7 +32,7 @@ const samwayProductsData = [
     description:
       "Компактный и эффективный обжимной станок для работы с различными типами рукавов высокого давления.",
     image: "https://stanok-rvd.ru/stanki_rvd/samway/titul_p20q.png",
-    link: "/stanok-rvd/pages/products/samway/p20q_samway/",
+    link: "../samway/p20q_samway/",
     specs: [
       { label: "Тип:", value: "Обжимной" },
       { label: "Модель:", value: "P20Q" },
@@ -45,7 +45,7 @@ const samwayProductsData = [
     description:
       "Профессиональный обжимной станок для крупных производств. Обеспечивает высокую производительность.",
     image: "https://stanok-rvd.ru/stanki_rvd/samway/titul_p32q.png",
-    link: "/stanok-rvd/pages/products/samway/p32q_samway/",
+    link: "../samway/p32q_samway/",
     specs: [
       { label: "Тип:", value: "Обжимной" },
       { label: "Модель:", value: "P32Q" },
@@ -58,7 +58,7 @@ const samwayProductsData = [
     description:
       "Специализированный обжимной станок для работы со сложными типами рукавов и фитингов.",
     image: "https://stanok-rvd.ru/stanki_rvd/samway/titul_s51.png",
-    link: "/stanok-rvd/pages/products/samway/s51_samway/",
+    link: "../samway/s51_samway/",
     specs: [
       { label: "Тип:", value: "Обжимной" },
       { label: "Модель:", value: "S51" },
@@ -71,7 +71,7 @@ const samwayProductsData = [
     description:
       "Профессиональный отрезной станок для точной резки рукавов высокого давления.",
     image: "https://stanok-rvd.ru/stanki_rvd/samway/titul_c401.png",
-    link: "/stanok-rvd/pages/products/samway/c401_samway/",
+    link: "../samway/c401_samway/",
     specs: [
       { label: "Тип:", value: "Отрезной" },
       { label: "Модель:", value: "C401/C400" },
@@ -84,7 +84,7 @@ const samwayProductsData = [
     description:
       "Эффективный зачистной станок для подготовки рукавов перед установкой фитингов.",
     image: "https://stanok-rvd.ru/stanki_rvd/samway/titul_skiver_51esc.jpg",
-    link: "/stanok-rvd/pages/products/samway/skiver_51esc/",
+    link: "../samway/skiver_51esc/",
     specs: [
       { label: "Тип:", value: "Зачистной" },
       { label: "Модель:", value: "51ESC" },

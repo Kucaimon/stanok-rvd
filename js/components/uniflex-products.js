@@ -6,7 +6,7 @@ const uniflexProductsData = [
     description:
       'Идеален для опрессовки гидравлических рукавов до 1" с четырьмя спиралями и 1.1/4" с двумя оплётками. Многофункциональная машина для сервиса вне помещений.',
     image: "https://stanok-rvd.ru/media/content/uniflex/S2M_title.jpg",
-    link: "/stanok-rvd/pages/products/uniflex/UNIFLEXS2M/",
+    link: "../uniflex/UNIFLEXS2M/",
     specs: [
       { label: "Тип:", value: "Мобильный" },
       { label: "Диапазон:", value: 'до 1.1/4"' },
@@ -18,7 +18,7 @@ const uniflexProductsData = [
     description:
       'Идеален для опрессовки гидравлических рукавов до 1" с 4 спиралями и 1.1/4" с 2 оплётками. Многофункциональная машина для сервиса небольших размеров.',
     image: "https://stanok-rvd.ru/media/content/uniflex/S2A_title.jpg",
-    link: "/stanok-rvd/pages/products/uniflex/UNIFLEXS2a/",
+    link: "../uniflex/UNIFLEXS2a/",
     specs: [
       { label: "Тип:", value: "Компактный" },
       { label: "Диапазон:", value: 'до 1.1/4"' },
@@ -30,7 +30,7 @@ const uniflexProductsData = [
     description:
       'Идеален для опрессовки гидравлических рукавов до 1" с 4 спиралями и 1.1/4" с 2 оплётками. Многофункциональная машина для сервиса небольших размеров.',
     image: "https://stanok-rvd.ru/media/content/uniflex/S2P_title.jpg",
-    link: "/stanok-rvd/pages/products/uniflex/UNIFLEXS2P/",
+    link: "../uniflex/UNIFLEXS2P/",
     specs: [
       { label: "Тип:", value: "Профессиональный" },
       { label: "Диапазон:", value: 'до 1.1/4"' },
@@ -42,7 +42,7 @@ const uniflexProductsData = [
     description:
       'Идеален для опрессовки гидравлических рукавов до 1.1/4" с четырьмя спиралями и до 2" с двумя оплётками. Многофункциональная машина для сервиса.',
     image: "https://stanok-rvd.ru/media/content/uniflex/S4Ecoline_title.jpg",
-    link: "/stanok-rvd/pages/products/uniflex/UNIFLEXS3Ecoline/",
+    link: "../uniflex/UNIFLEXS3Ecoline/",
     specs: [
       { label: "Тип:", value: "Ecoline" },
       { label: "Диапазон:", value: 'до 2"' },
@@ -54,7 +54,7 @@ const uniflexProductsData = [
     description:
       'Идеален для опрессовки гидравлических рукавов до 1.1/2" с четырьмя спиралями и до 2" с двумя оплётками. Многофункциональная машина для сервиса.',
     image: "https://stanok-rvd.ru/media/content/uniflex/S4_title.jpg",
-    link: "/stanok-rvd/pages/products/uniflex/UNIFLEXS4/",
+    link: "../uniflex/UNIFLEXS4/",
     specs: [
       { label: "Тип:", value: "Стандартный" },
       { label: "Диапазон:", value: 'до 2"' },
@@ -66,7 +66,7 @@ const uniflexProductsData = [
     description:
       'Идеален для опрессовки гидравлических рукавов до 1.1/2" с четырьмя спиралями и до 2" с двумя оплётками. Многофункциональная машина для сервиса.',
     image: "https://stanok-rvd.ru/media/content/uniflex/S4Ecoline_title.jpg",
-    link: "/stanok-rvd/pages/products/uniflex/UNIFLEXS4Ecoline/",
+    link: "../uniflex/UNIFLEXS4Ecoline/",
     specs: [
       { label: "Тип:", value: "Ecoline" },
       { label: "Диапазон:", value: 'до 2"' },
@@ -78,7 +78,7 @@ const uniflexProductsData = [
     description:
       'Идеален для опрессовки гидравлических рукавов до 1.1/2" с шестью спиралями и до 2" с четырьмя спиралями. Многофункциональная машина для сервиса.',
     image: "https://stanok-rvd.ru/media/content/uniflex/S6_title.jpg",
-    link: "/stanok-rvd/pages/products/uniflex/UNIFLEXS6/",
+    link: "../uniflex/UNIFLEXS6/",
     specs: [
       { label: "Тип:", value: "Мощный" },
       { label: "Диапазон:", value: 'до 2"' },
@@ -90,7 +90,7 @@ const uniflexProductsData = [
     description:
       'Идеален для опрессовки гидравлических рукавов до 1.1/4" с четырьмя спиралями и до 2" с двумя оплётками. Многофункциональная машина для сервиса.',
     image: "https://stanok-rvd.ru/media/content/uniflex/S4Ecoline_title.jpg",
-    link: "/stanok-rvd/pages/products/uniflex/uniflex-s6_ecoline/",
+    link: "../uniflex/uniflex-s6_ecoline/",
     specs: [
       { label: "Тип:", value: "Ecoline" },
       { label: "Диапазон:", value: 'до 2"' },
@@ -102,7 +102,7 @@ const uniflexProductsData = [
     description:
       'Идеален для опрессовки гидравлических рукавов 3" и промышленного рукава до 6" включительно. Характеризуется высокой скоростью работы для крупного производства.',
     image: "https://stanok-rvd.ru/media/content/uniflex/HM325_title.jpg",
-    link: "/stanok-rvd/pages/products/uniflex/uniflex-hm325ib_hm375i_hm380i/",
+    link: "../uniflex/uniflex-hm325ib_hm375i_hm380i/",
     specs: [
       { label: "Тип:", value: "Промышленный" },
       { label: "Диапазон:", value: 'до 6"' },

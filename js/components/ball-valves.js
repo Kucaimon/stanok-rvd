@@ -5,7 +5,7 @@ class BallValvesPage {
       {
         title: "КРАН ШАРОВЫЙ ВЫСОКОГО ДАВЛЕНИЯ 2Х ХОДОВОЙ",
         image: "https://stanok-rvd.ru/kran_sharovyy/bvs-2.png",
-        link: "/stanok-rvd/pages/products/valves/2x_xodovoy.html",
+        link: "../valves/2x_xodovoy.html",
         description:
           "КРАНЫ ШАРОВЫЕ ВЫСОКОГО ДАВЛЕНИЯ 2Х ХОДОВОЙ, INTEVA, HOLMBURY, GEMELS, PISTER, LSQ",
       },
@@ -13,14 +13,14 @@ class BallValvesPage {
         title:
           "КРАН ШАРОВЫЙ ВЫСОКОГО ДАВЛЕНИЯ 2Х ХОДОВОЙ МЕТРИЧЕСКАЯ РЕЗЬБА DIN 2353",
         image: "https://stanok-rvd.ru/kran_sharovyy/bvs-2.png",
-        link: "/stanok-rvd/pages/products/valves/2x_hodovoy_din2353.html",
+        link: "../valves/2x_hodovoy_din2353.html",
         description:
           "КРАНЫ ШАРОВЫЕ ВЫСОКОГО ДАВЛЕНИЯ 2Х ХОДОВОЙ МЕТРИЧЕСКАЯ РЕЗЬБА DIN 2353",
       },
       {
         title: "КРАН ШАРОВЫЙ ВЫСОКОГО ДАВЛЕНИЯ 3Х ХОДОВОЙ",
         image: "https://stanok-rvd.ru/kran_sharovyy/bvs-3.png",
-        link: "/stanok-rvd/pages/products/valves/3x_xodovoy.html",
+        link: "../valves/3x_xodovoy.html",
         description:
           "КРАНЫ ШАРОВЫЕ ВЫСОКОГО ДАВЛЕНИЯ 3Х ХОДОВОЙ, INTEVA, HOLMBURY, GEMELS, PISTER, LSQ",
       },
@@ -47,6 +47,13 @@ class BallValvesPage {
                     <img src="${item.image}" alt="${item.title}" class="valve-image" loading="lazy">
                 </a>
                 <h3 class="valve-title">${item.title}</h3>
+                <p class="product-card__description">${item.description}</p>
+                <div class="product-card__specs">
+                    <div class="spec-item">
+                        <span class="spec-label">Тип:</span>
+                        <span class="spec-value">${item.title.includes('2Х') ? '2-х ходовой' : item.title.includes('3Х') ? '3-х ходовой' : 'Кран шаровой'}</span>
+                    </div>
+                </div>
                 <a href="${item.link}" class="valve-link" title="${item.description}">
                     Подробнее
                 </a>

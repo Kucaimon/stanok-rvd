@@ -130,7 +130,7 @@ class Certificates {
     this.modal.className = "certificate-modal";
     this.modal.innerHTML = `
             <div class="modal-content">
-                <button class="modal-close" aria-label="Закрыть">✕</button>
+                <button class="modal-close" aria-label="Закрыть">&#10006;</button>
                 <img class="modal-image" src="" alt="">
             </div>
         `;

@@ -5,21 +5,21 @@ class BRSPage {
       {
         title: "БРС ISO-A, ISO7241-A",
         image: "https://stanok-rvd.ru/brs/iso_a_titul.jpg",
-        link: "/stanok-rvd/pages/products/brs/iso_a.html",
+        link: "../brs/iso_a.html",
         description:
           "ГИДРАВЛИЧЕСКИЕ БРС С КЛАПАНОМ КОНИЧЕСКОЙ ФОРМЫ И ШАРИКОВЫМ ЗАМКОМ ISO-A, ISO7241-A",
       },
       {
         title: "БРС FIRG FLAT, ISO 16028",
         image: "https://stanok-rvd.ru/brs/firg_titul.jpg",
-        link: "/stanok-rvd/pages/products/brs/firg.html",
+        link: "../brs/firg.html",
         description:
           "ГИДРАВЛИЧЕСКИЕ БРС С ПЛОСКИМ КЛАПАНОМ И ШАРИКОВЫМ ЗАМКОМ ISO 16028, FIRG",
       },
       {
         title: "БРС HPA БРСН-БРСД",
         image: "https://stanok-rvd.ru/brs/hpa_titul.jpg",
-        link: "/stanok-rvd/pages/products/brs/hpa.html",
+        link: "../brs/hpa.html",
         description:
           "ГИДРАВИЧЕСКИЕ БРС ДЛЯ ДОМКРАТОВ И ГИДРОИНСТРУМЕНТА HPA, БРСН/БРСД",
       },
@@ -32,7 +32,7 @@ class BRSPage {
       {
         title: "БРС JCB 3CX SM, 4CX SM, 5CX",
         image: "https://stanok-rvd.ru/brs/brs_jsb.jpg",
-        link: "/stanok-rvd/pages/products/brs/brs_jsb.html",
+        link: "../brs/brs_jsb.html",
         description:
           "БРС ЭКСКАВАТОР-ПОГРУЗЧИК JCB 3CX, JCB 4CX SM, JCB 5CX 45-920047 29/18",
         special: true,
@@ -62,6 +62,13 @@ class BRSPage {
         }" class="brs-image" loading="lazy">
                 </a>
                 <h3 class="brs-title">${item.title}</h3>
+                <p class="product-card__description">${item.description}</p>
+                <div class="product-card__specs">
+                    <div class="spec-item">
+                        <span class="spec-label">Стандарт:</span>
+                        <span class="spec-value">${item.title.match(/ISO|SAE|DIN/)?.[0] || 'БРС'}</span>
+                    </div>
+                </div>
                 <a href="${item.link}" class="brs-link" title="${
           item.description
         }">
