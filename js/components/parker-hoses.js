@@ -37,14 +37,7 @@
                 </div>
                 <div class="product-card__content">
                     <h3 class="product-card__title">${hose.title}</h3>
-                    <p class="product-card__description">${hose.description}</p>
-                    <div class="product-card__specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Производитель:</span>
-                            <span class="spec-value">Parker</span>
-                        </div>
-                    </div>
-                    <a href="${hose.link}" class="product-card__button" title="${hose.title}">
+                    <a href="${hose.link}" class="product-card__button">
                         Подробнее
                     </a>
                 </div>

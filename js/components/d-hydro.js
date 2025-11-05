@@ -185,19 +185,6 @@ function createProductCard(product) {
         </div>
         <div class="product-card__content">
             <h3 class="product-card__title">${product.name}</h3>
-            <p class="product-card__description">${product.description}</p>
-            <div class="product-card__specs">
-                ${product.specs
-                  .map(
-                    (spec) => `
-                    <div class="spec-item">
-                        <span class="spec-label">${spec.label}</span>
-                        <span class="spec-value">${spec.value}</span>
-                    </div>
-                `
-                  )
-                  .join("")}
-            </div>
             <a href="${product.link}" class="product-card__button">Подробнее</a>
         </div>
     `;

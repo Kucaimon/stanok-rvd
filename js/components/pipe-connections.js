@@ -54,14 +54,7 @@ class PipeConnectionsPage {
                 </div>
                 <div class="product-card__content">
                     <h3 class="product-card__title">${item.title}</h3>
-                    <p class="product-card__description">${item.description}</p>
-                    <div class="product-card__specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Стандарт:</span>
-                            <span class="spec-value">${item.title.match(/DIN\s*\d+/)?.[0] || 'DIN 2353'}</span>
-                        </div>
-                    </div>
-                    <a href="${item.link}" class="product-card__button" title="${item.description}">
+                    <a href="${item.link}" class="product-card__button">
                         Подробнее
                     </a>
                 </div>

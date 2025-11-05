@@ -49,14 +49,7 @@
                 </div>
                 <div class="product-card__content">
                     <h3 class="product-card__title">${hose.title}</h3>
-                    <p class="product-card__description">${hose.description}</p>
-                    <div class="product-card__specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Тип:</span>
-                            <span class="spec-value">${hose.title.split(' ')[1] || 'Рукав'}</span>
-                        </div>
-                    </div>
-                    <a href="${hose.link}" class="product-card__button" title="${hose.description}">
+                    <a href="${hose.link}" class="product-card__button">
                         Подробнее
                     </a>
                 </div>

@@ -48,14 +48,7 @@ class BallValvesPage {
                 </div>
                 <div class="product-card__content">
                     <h3 class="product-card__title">${item.title}</h3>
-                    <p class="product-card__description">${item.description}</p>
-                    <div class="product-card__specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Тип:</span>
-                            <span class="spec-value">${item.title.includes('2Х') ? '2-х ходовой' : item.title.includes('3Х') ? '3-х ходовой' : 'Кран шаровой'}</span>
-                        </div>
-                    </div>
-                    <a href="${item.link}" class="product-card__button" title="${item.description}">
+                    <a href="${item.link}" class="product-card__button">
                         Подробнее
                     </a>
                 </div>
