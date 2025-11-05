@@ -118,13 +118,6 @@
                         </div>
                         <div class="product-card__content">
                             <h3 class="product-card__title">${product.title}</h3>
-                            <p class="product-card__description">${product.description}</p>
-                            <div class="product-card__specs">
-                                <div class="spec-item">
-                                    <span class="spec-label">Категория:</span>
-                                    <span class="spec-value">${product.description.split(',')[0] || product.title}</span>
-                                </div>
-                            </div>
                             <a href="${product.link}" class="product-card__button">Подробнее</a>
                         </div>
                     </div>
