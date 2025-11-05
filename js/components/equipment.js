@@ -1,4 +1,4 @@
-class EquipmentPage {
+﻿class EquipmentPage {
   constructor() {
     this.brands = [
       {

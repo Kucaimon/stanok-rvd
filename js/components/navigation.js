@@ -1,4 +1,4 @@
-class Navigation {
+﻿class Navigation {
   constructor() {
     this.mobileMenuBtn = document.querySelector(".mobile-menu-btn");
     this.navList = document.querySelector(".nav-list");

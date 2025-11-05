@@ -1,4 +1,4 @@
-class Spravka {
+﻿class Spravka {
   constructor() {
     this.quickLinks = [
       {

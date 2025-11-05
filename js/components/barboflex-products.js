@@ -1,4 +1,4 @@
-// BARBOFLEX products data
+﻿// BARBOFLEX products data
 const barboflexProductsData = [
   {
     id: 1,

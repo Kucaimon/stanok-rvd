@@ -1,4 +1,4 @@
-class Certificates {
+﻿class Certificates {
   constructor() {
     this.certificates = [
       {

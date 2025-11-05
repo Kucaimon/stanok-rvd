@@ -1,4 +1,4 @@
-class ThermoplasticHosesPage {
+﻿class ThermoplasticHosesPage {
   constructor() {
     this.hoses = [
       {

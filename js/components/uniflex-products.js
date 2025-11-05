@@ -1,4 +1,4 @@
-// UNIFLEX products data extracted from the original HTML
+﻿// UNIFLEX products data extracted from the original HTML
 const uniflexProductsData = [
   {
     id: 1,

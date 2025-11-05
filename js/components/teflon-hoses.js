@@ -1,4 +1,4 @@
-class TeflonHosesPage {
+﻿class TeflonHosesPage {
   constructor() {
     this.hoses = [
       {

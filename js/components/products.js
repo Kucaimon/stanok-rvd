@@ -1,4 +1,4 @@
-class ProductsGrid {
+﻿class ProductsGrid {
   constructor() {
     this.products = [
       {

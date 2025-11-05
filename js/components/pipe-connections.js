@@ -1,4 +1,4 @@
-// pipe-connections.js
+﻿// pipe-connections.js
 class PipeConnectionsPage {
   constructor() {
     this.connectionsItems = [

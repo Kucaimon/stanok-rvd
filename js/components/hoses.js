@@ -1,4 +1,4 @@
-class HosesPage {
+﻿class HosesPage {
   constructor() {
     this.hoses = [
       {

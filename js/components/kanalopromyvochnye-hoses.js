@@ -1,4 +1,4 @@
-// sewer-hoses.js
+﻿// sewer-hoses.js
 class SewerHosesPage {
   constructor() {
     this.init();
@@ -10,7 +10,7 @@ class SewerHosesPage {
     this.initSmoothScrolling();
   }
 
-  // Добавляем интерактивность таблице
+  // Р”РѕР±Р°РІР»СЏРµРј РёРЅС‚РµСЂР°РєС‚РёРІРЅРѕСЃС‚СЊ С‚Р°Р±Р»РёС†Рµ
   addTableInteractivity() {
     const tableRows = document.querySelectorAll(
       ".specifications-table tbody tr"
@@ -27,7 +27,7 @@ class SewerHosesPage {
     });
   }
 
-  // Функция для увеличения изображений при клике
+  // Р¤СѓРЅРєС†РёСЏ РґР»СЏ СѓРІРµР»РёС‡РµРЅРёСЏ РёР·РѕР±СЂР°Р¶РµРЅРёР№ РїСЂРё РєР»РёРєРµ
   addImageZoom() {
     const images = document.querySelectorAll(
       ".description-image img, .options-image img, .applications-image img"
@@ -40,14 +40,14 @@ class SewerHosesPage {
       });
     });
 
-    // Закрытие увеличенного изображения при клике вне его
+    // Р—Р°РєСЂС‹С‚РёРµ СѓРІРµР»РёС‡РµРЅРЅРѕРіРѕ РёР·РѕР±СЂР°Р¶РµРЅРёСЏ РїСЂРё РєР»РёРєРµ РІРЅРµ РµРіРѕ
     document.addEventListener("click", (e) => {
       if (e.target.classList.contains("zoomed-image-backdrop")) {
         this.closeZoomedImage();
       }
     });
 
-    // Закрытие по ESC
+    // Р—Р°РєСЂС‹С‚РёРµ РїРѕ ESC
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") {
         this.closeZoomedImage();
@@ -73,14 +73,14 @@ class SewerHosesPage {
     const closeBtn = document.createElement("button");
     closeBtn.className = "zoom-close-btn";
     closeBtn.innerHTML = "&times;";
-    closeBtn.setAttribute("aria-label", "Закрыть");
+    closeBtn.setAttribute("aria-label", "Р—Р°РєСЂС‹С‚СЊ");
     closeBtn.addEventListener("click", () => this.closeZoomedImage());
 
     backdrop.appendChild(zoomedImg);
     backdrop.appendChild(closeBtn);
     document.body.appendChild(backdrop);
 
-    // Анимация появления
+    // РђРЅРёРјР°С†РёСЏ РїРѕСЏРІР»РµРЅРёСЏ
     setTimeout(() => {
       backdrop.classList.add("active");
     }, 10);
@@ -96,7 +96,7 @@ class SewerHosesPage {
     }
   }
 
-  // Плавная прокрутка для якорных ссылок
+  // РџР»Р°РІРЅР°СЏ РїСЂРѕРєСЂСѓС‚РєР° РґР»СЏ СЏРєРѕСЂРЅС‹С… СЃСЃС‹Р»РѕРє
   initSmoothScrolling() {
     const links = document.querySelectorAll('a[href^="#"]');
 
@@ -119,7 +119,7 @@ class SewerHosesPage {
     });
   }
 
-  // Динамическое обновление заголовка при скролле
+  // Р”РёРЅР°РјРёС‡РµСЃРєРѕРµ РѕР±РЅРѕРІР»РµРЅРёРµ Р·Р°РіРѕР»РѕРІРєР° РїСЂРё СЃРєСЂРѕР»Р»Рµ
   initScrollEffects() {
     let lastScrollY = window.scrollY;
 
@@ -138,7 +138,7 @@ class SewerHosesPage {
   }
 }
 
-// Инициализация при загрузке DOM
+// Р�РЅРёС†РёР°Р»РёР·Р°С†РёСЏ РїСЂРё Р·Р°РіСЂСѓР·РєРµ DOM
 document.addEventListener("DOMContentLoaded", () => {
   new SewerHosesPage();
 });

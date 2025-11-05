@@ -1,4 +1,4 @@
-// Finn-Power products data extracted from the original HTML
+﻿// Finn-Power products data extracted from the original HTML
 const finnpowerProductsData = [
   {
     id: 1,

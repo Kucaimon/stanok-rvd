@@ -1,4 +1,4 @@
-// O+P products data extracted from the original HTML
+﻿// O+P products data extracted from the original HTML
 const opslrProductsData = [
   {
     id: 1,

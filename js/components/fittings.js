@@ -1,4 +1,4 @@
-class FittingsPage {
+﻿class FittingsPage {
   constructor() {
     this.fittings = [
       {

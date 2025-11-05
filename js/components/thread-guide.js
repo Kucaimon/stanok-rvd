@@ -1,4 +1,4 @@
-// thread-guide.js
+﻿// thread-guide.js
 class ThreadGuidePage {
   constructor() {
     this.threadData = [

@@ -1,4 +1,4 @@
-// Products data extracted from the original HTML
+﻿// Products data extracted from the original HTML
 const productsData = [
   {
     id: 1,

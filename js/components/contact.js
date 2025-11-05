@@ -1,4 +1,4 @@
-class ContactPage {
+﻿class ContactPage {
   constructor() {
     this.init();
   }
@@ -39,13 +39,13 @@ class ContactPage {
         if (e.ctrlKey || e.metaKey) {
           e.preventDefault();
           this.copyToClipboard(element.textContent.trim());
-          this.showCopyFeedback(element, "Скопировано!");
+          this.showCopyFeedback(element, "РЎРєРѕРїРёСЂРѕРІР°РЅРѕ!");
         }
       });
 
       // Add tooltip on hover
       element.addEventListener("mouseenter", () => {
-        this.showTooltip(element, "Ctrl+Click для копирования");
+        this.showTooltip(element, "Ctrl+Click РґР»СЏ РєРѕРїРёСЂРѕРІР°РЅРёСЏ");
       });
 
       element.addEventListener("mouseleave", () => {

@@ -1,4 +1,4 @@
-class OrderForm {
+﻿class OrderForm {
   constructor() {
     this.form = document.getElementById("orderForm");
     this.init();

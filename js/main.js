@@ -1,4 +1,4 @@
-// Main application script
+﻿// Main application script
 class App {
   constructor() {
     this.init();

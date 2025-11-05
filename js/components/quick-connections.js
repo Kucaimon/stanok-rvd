@@ -1,4 +1,4 @@
-// brs.js
+﻿// brs.js
 class BRSPage {
   constructor() {
     this.brsItems = [

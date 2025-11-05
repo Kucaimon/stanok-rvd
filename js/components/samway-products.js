@@ -1,4 +1,4 @@
-// SAMWAY products data
+﻿// SAMWAY products data
 const samwayProductsData = [
   {
     id: 1,
