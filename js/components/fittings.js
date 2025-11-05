@@ -119,21 +119,23 @@
     fittingsGrid.innerHTML = this.fittings
       .map(
         (fitting) => `
-            <div class="fitting-card">
-                <a href="${fitting.link}" title="${fitting.description}">
-                    <img src="${fitting.image}" alt="${fitting.title}" class="fitting-image" loading="lazy">
-                </a>
-                <h3 class="fitting-title">${fitting.title}</h3>
-                <p class="product-card__description">${fitting.description}</p>
-                <div class="product-card__specs">
-                    <div class="spec-item">
-                        <span class="spec-label">Тип:</span>
-                        <span class="spec-value">${fitting.title.split(' ')[1] || 'Фитинг'}</span>
-                    </div>
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="${fitting.image}" alt="${fitting.title}" class="product-image" loading="lazy">
                 </div>
-                <a href="${fitting.link}" class="fitting-link" title="${fitting.description}">
-                    Подробнее
-                </a>
+                <div class="product-card__content">
+                    <h3 class="product-card__title">${fitting.title}</h3>
+                    <p class="product-card__description">${fitting.description}</p>
+                    <div class="product-card__specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Тип:</span>
+                            <span class="spec-value">${fitting.title.split(' ')[1] || 'Фитинг'}</span>
+                        </div>
+                    </div>
+                    <a href="${fitting.link}" class="product-card__button" title="${fitting.description}">
+                        Подробнее
+                    </a>
+                </div>
             </div>
         `
       )

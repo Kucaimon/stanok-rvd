@@ -42,21 +42,23 @@ class BallValvesPage {
     valvesGrid.innerHTML = this.valvesItems
       .map(
         (item) => `
-            <div class="valve-card">
-                <a href="${item.link}" title="${item.description}">
-                    <img src="${item.image}" alt="${item.title}" class="valve-image" loading="lazy">
-                </a>
-                <h3 class="valve-title">${item.title}</h3>
-                <p class="product-card__description">${item.description}</p>
-                <div class="product-card__specs">
-                    <div class="spec-item">
-                        <span class="spec-label">Тип:</span>
-                        <span class="spec-value">${item.title.includes('2Х') ? '2-х ходовой' : item.title.includes('3Х') ? '3-х ходовой' : 'Кран шаровой'}</span>
-                    </div>
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="${item.image}" alt="${item.title}" class="product-image" loading="lazy">
                 </div>
-                <a href="${item.link}" class="valve-link" title="${item.description}">
-                    Подробнее
-                </a>
+                <div class="product-card__content">
+                    <h3 class="product-card__title">${item.title}</h3>
+                    <p class="product-card__description">${item.description}</p>
+                    <div class="product-card__specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Тип:</span>
+                            <span class="spec-value">${item.title.includes('2Х') ? '2-х ходовой' : item.title.includes('3Х') ? '3-х ходовой' : 'Кран шаровой'}</span>
+                        </div>
+                    </div>
+                    <a href="${item.link}" class="product-card__button" title="${item.description}">
+                        Подробнее
+                    </a>
+                </div>
             </div>
         `
       )
@@ -64,21 +66,21 @@ class BallValvesPage {
   }
 
   addCardInteractions() {
-    const cards = document.querySelectorAll(".valve-card");
+    const cards = document.querySelectorAll(".product-card");
 
     cards.forEach((card) => {
       card.addEventListener("mouseenter", () => {
-        card.style.transform = "translateY(-10px)";
+        card.style.transform = "translateY(-5px)";
       });
 
       card.addEventListener("mouseleave", () => {
-        card.style.transform = "translateY(-8px)";
+        card.style.transform = "translateY(0)";
       });
     });
   }
 
   initImageZoom() {
-    const images = document.querySelectorAll(".valve-image");
+    const images = document.querySelectorAll(".product-image");
 
     images.forEach((img) => {
       img.style.cursor = "zoom-in";

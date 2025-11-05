@@ -55,25 +55,23 @@ class BRSPage {
     brsGrid.innerHTML = this.brsItems
       .map(
         (item) => `
-            <div class="brs-card ${item.special ? "jcb-card" : ""}">
-                <a href="${item.link}" title="${item.description}">
-                    <img src="${item.image}" alt="${
-          item.title
-        }" class="brs-image" loading="lazy">
-                </a>
-                <h3 class="brs-title">${item.title}</h3>
-                <p class="product-card__description">${item.description}</p>
-                <div class="product-card__specs">
-                    <div class="spec-item">
-                        <span class="spec-label">Стандарт:</span>
-                        <span class="spec-value">${item.title.match(/ISO|SAE|DIN/)?.[0] || 'БРС'}</span>
-                    </div>
+            <div class="product-card ${item.special ? "jcb-card" : ""}">
+                <div class="product-card__image">
+                    <img src="${item.image}" alt="${item.title}" class="product-image" loading="lazy">
                 </div>
-                <a href="${item.link}" class="brs-link" title="${
-          item.description
-        }">
-                    Подробнее
-                </a>
+                <div class="product-card__content">
+                    <h3 class="product-card__title">${item.title}</h3>
+                    <p class="product-card__description">${item.description}</p>
+                    <div class="product-card__specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Стандарт:</span>
+                            <span class="spec-value">${item.title.match(/ISO|SAE|DIN/)?.[0] || 'БРС'}</span>
+                        </div>
+                    </div>
+                    <a href="${item.link}" class="product-card__button" title="${item.description}">
+                        Подробнее
+                    </a>
+                </div>
             </div>
         `
       )
@@ -81,7 +79,7 @@ class BRSPage {
   }
 
   addCardInteractions() {
-    const cards = document.querySelectorAll(".brs-card");
+    const cards = document.querySelectorAll(".product-card");
 
     cards.forEach((card) => {
       card.addEventListener("mouseenter", () => {
@@ -95,7 +93,7 @@ class BRSPage {
   }
 
   initImageZoom() {
-    const images = document.querySelectorAll(".brs-image");
+    const images = document.querySelectorAll(".product-image");
 
     images.forEach((img) => {
       img.style.cursor = "zoom-in";
