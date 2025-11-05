@@ -31,14 +31,20 @@
     hosesList.innerHTML = this.hoses
       .map(
         (hose) => `
-            <div class="hose-item">
-                <a href="${hose.link}" title="${hose.title}">
-                    <img src="${hose.image}" alt="${hose.title}" class="hose-image" loading="lazy">
-                </a>
-                <div class="hose-content">
-                    <h3 class="hose-title">${hose.title}</h3>
-                    <p class="hose-description">${hose.description}</p>
-                    <a href="${hose.link}" class="hose-link" title="${hose.title}">
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="${hose.image}" alt="${hose.title}" class="product-image" loading="lazy">
+                </div>
+                <div class="product-card__content">
+                    <h3 class="product-card__title">${hose.title}</h3>
+                    <p class="product-card__description">${hose.description}</p>
+                    <div class="product-card__specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Производитель:</span>
+                            <span class="spec-value">Parker</span>
+                        </div>
+                    </div>
+                    <a href="${hose.link}" class="product-card__button" title="${hose.title}">
                         Подробнее
                     </a>
                 </div>
