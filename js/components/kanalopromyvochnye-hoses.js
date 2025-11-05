@@ -138,7 +138,7 @@ class SewerHosesPage {
   }
 }
 
-// Р�РЅРёС†РёР°Р»РёР·Р°С†РёСЏ РїСЂРё Р·Р°РіСЂСѓР·РєРµ DOM
+// Инициализация при загрузке DOM
 document.addEventListener("DOMContentLoaded", () => {
   new SewerHosesPage();
 });
