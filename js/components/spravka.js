@@ -5,7 +5,7 @@
         title: "ОПРЕДЕЛИТЕЛЬ РЕЗЬБ",
         description: "Как определить резьбу и тип фитинга",
         link: "spravka/thread-guide.html",
-        icon: "&#128269;",
+        icon: "🔍",
         category: "Инструменты",
       },
       {
@@ -13,7 +13,7 @@
         description:
           "Правила и технологии изготовления рукавов высокого давления",
         link: "spravka/manufacturing-rvd.html",
-        icon: "&#128736;",
+        icon: "⚙️",
         category: "Производство",
       },
       {
@@ -21,7 +21,7 @@
         description:
           "Правильный выбор и прокладка шлангов для оптимальной работы",
         link: "spravka/hose-selection.html",
-        icon: "&#128207;",
+        icon: "📏",
         category: "Монтаж",
       },
     ];
@@ -208,7 +208,7 @@
                 (link) => `
                     <div class="detailed-link-item">
                         <div class="detailed-link-content">
-                            <div class="detailed-link-icon">&#128196;</div>
+                            <div class="detailed-link-icon">📄</div>
                             <div class="detailed-link-text">
                                 <h3 class="detailed-link-title">
                                     <a href="${link.link}" title="${link.description}">

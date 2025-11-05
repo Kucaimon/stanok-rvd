@@ -103,7 +103,7 @@ class App {
         if (container && !container.querySelector(".image-placeholder")) {
           const placeholder = document.createElement("div");
           placeholder.className = "image-placeholder";
-          placeholder.innerHTML = "&#128218;";
+          placeholder.innerHTML = "📚";
           placeholder.style.cssText = "font-size: 3rem; color: var(--metal-light); display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;";
           container.appendChild(placeholder);
         }

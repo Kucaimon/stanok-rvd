@@ -28,13 +28,13 @@
     this.mobileMenuBtn.innerHTML = this.navList.classList.contains(
       "nav-list--active"
     )
-      ? "&#10006;"
-      : "&#9776;";
+      ? "✕"
+      : "☰";
   }
 
   closeMobileMenu() {
     this.navList.classList.remove("nav-list--active");
-    this.mobileMenuBtn.innerHTML = "&#9776;";
+    this.mobileMenuBtn.innerHTML = "☰";
   }
 }
 

@@ -221,7 +221,7 @@
     const successElement = document.createElement("div");
     successElement.className = "form-success active";
     successElement.innerHTML = `
-            <div class="success-icon">&#10004;</div>
+            <div class="success-icon">✅</div>
             <h3 class="success-title">Запрос успешно отправлен!</h3>
             <p class="success-message">
                 В течение 10-20 минут вы получите контрольное письмо с текстом вашего запроса. 
