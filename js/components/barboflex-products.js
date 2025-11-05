@@ -6,7 +6,7 @@ const barboflexProductsData = [
     description:
       'Ручные отрезные станки Barboflex CUT 125 позволяют производить резку гидравлических, пневматических и промышленных шлангов. Идеально подходит для резки гибких гидравлических четырехнавивочных рукавов до 1".',
     image: "https://stanok-rvd.ru/stanki_rvd/barboflex/cut125_titull.png",
-    link: "../barboflex/cut125/",
+    link: "barboflex/cut125/",
     specs: [
       { label: "Тип:", value: "Ручной" },
       { label: "Диапазон:", value: 'до 1"' },
@@ -19,7 +19,7 @@ const barboflexProductsData = [
     description:
       "Отрезной станок для РВД Barboflex CUT 225 разработан для применения в ремонтных и сервисных предприятиях с месячными объемами производства РВД порядка 3000 штук в месяц.",
     image: "https://stanok-rvd.ru/stanki_rvd/barboflex/cut225_titul.png",
-    link: "../barboflex/cut225/",
+    link: "barboflex/cut225/",
     specs: [
       { label: "Тип:", value: "Стационарный" },
       { label: "Диапазон:", value: 'до 1.14"' },
@@ -32,7 +32,7 @@ const barboflexProductsData = [
     description:
       "Отрезной станок для РВД Barboflex CUT 325 разработан для применения в ремонтных и сервисных предприятиях с месячными объемами производства РВД порядка 10000 штук в месяц.",
     image: "https://stanok-rvd.ru/stanki_rvd/barboflex/cut325_titull.png",
-    link: "../barboflex/cut325/",
+    link: "barboflex/cut325/",
     specs: [
       { label: "Тип:", value: "Промышленный" },
       { label: "Диапазон:", value: 'до 2"' },
@@ -45,7 +45,7 @@ const barboflexProductsData = [
     description:
       'Зачистной станок Barboflex SKM 100 предназначен для зачистки четырёхнавивочных рукавов высокого давления. Позволяет производить внутреннюю и внешнюю зачистку гидравлических рукавов до 2".',
     image: "https://stanok-rvd.ru/stanki_rvd/barboflex/skm100_titul.png",
-    link: "../barboflex/skm100/",
+    link: "barboflex/skm100/",
     specs: [
       { label: "Тип:", value: "Зачистной" },
       { label: "Диапазон:", value: 'до 2"' },
