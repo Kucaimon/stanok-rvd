@@ -39,13 +39,13 @@
         if (e.ctrlKey || e.metaKey) {
           e.preventDefault();
           this.copyToClipboard(element.textContent.trim());
-          this.showCopyFeedback(element, "РЎРєРѕРїРёСЂРѕРІР°РЅРѕ!");
+          this.showCopyFeedback(element, "Скопировано!");
         }
       });
 
       // Add tooltip on hover
       element.addEventListener("mouseenter", () => {
-        this.showTooltip(element, "Ctrl+Click РґР»СЏ РєРѕРїРёСЂРѕРІР°РЅРёСЏ");
+        this.showTooltip(element, "Ctrl+Click для копирования");
       });
 
       element.addEventListener("mouseleave", () => {
