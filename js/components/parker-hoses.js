@@ -4,14 +4,14 @@
       {
         title: "Р СѓРєР°РІ Parker 371LT",
         image: "https://stanok-rvd.ru/media/content/parker/371lt_titul.jpg",
-        link: "../parker-hoses/371lt.html",
+        link: "parker-hoses/371lt.html",
         description:
           "Р СѓРєР°РІ Parker 371LT РѕС‚РІРµС‡Р°РµС‚ СЃС‚Р°РЅРґР°СЂС‚Р°Рј DIN EN856 4SP, DIN 20023 4SP, SAE 100R12 Рё РїСЂРёРјРµРЅСЏРµС‚СЃСЏ РІ РіРёРґСЂРѕСЃРёСЃС‚РµРјР°С… СЃ Р±РѕР»СЊС€РёРј РґР°РІР»РµРЅРёРµРј. РЁР»Р°РЅРі Parker 371LT СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ Рё РїСЂРµРІС‹С€Р°РµС‚ С‚СЂРµР±РѕРІР°РЅРёСЏ Р“РћРЎРў 25452-90.",
       },
       {
         title: "Р СѓРєР°РІ Parker 461LT",
         image: "https://stanok-rvd.ru/media/content/parker/461lt_titul.jpg",
-        link: "../parker-hoses/461lt.html",
+        link: "parker-hoses/461lt.html",
         description:
           "Р СѓРєР°РІ Parker 461LT РѕС‚РІРµС‡Р°РµС‚ СЃС‚Р°РЅРґР°СЂС‚Р°Рј DIN EN 857 2SC, DIN 20022 2SC, SAE 100R2AT Рё РїСЂРёРјРµРЅСЏРµС‚СЃСЏ РІ РіРёРґСЂРѕСЃРёСЃС‚РµРјР°С… СЃРѕ СЃСЂРµРґРЅРёРј РґР°РІР»РµРЅРёРµРј. РЁР»Р°РЅРі Parker 461LT DIN EN 857 2SC СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ Рё РїСЂРµРІС‹С€Р°РµС‚ С‚СЂРµР±РѕРІР°РЅРёСЏ Р“РћРЎРў 6286-73 РўРёРї 2.",
       },
