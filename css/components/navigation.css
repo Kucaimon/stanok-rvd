@@ -54,6 +54,16 @@
   box-shadow: 0 2px 8px var(--green-shadow);
 }
 
+.nav-link--active {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.nav-link--active::after {
+  width: 100%;
+}
+
 .mobile-menu-btn {
   display: none;
   width: 100%;

@@ -20,7 +20,63 @@
           this.closeMobileMenu();
         }
       });
+
+      // Set active menu item based on current page
+      this.setActiveMenuItem();
     }
+  }
+
+  setActiveMenuItem() {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    navLinks.forEach((link) => {
+      const linkPath = link.getAttribute("href");
+      if (linkPath) {
+        // Remove active class from all links
+        link.classList.remove("nav-link--active");
+
+        // Check if current page matches link
+        if (this.isCurrentPage(linkPath, currentPath)) {
+          link.classList.add("nav-link--active");
+        }
+      }
+    });
+  }
+
+  isCurrentPage(linkPath, currentPath) {
+    // Get current page filename
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const currentPageName = currentPage.replace('.html', '');
+    
+    // Normalize link path
+    let normalizedLink = linkPath.replace(/^\.\.\//g, "").replace(/^\.\//g, "");
+    normalizedLink = normalizedLink.split('/').pop() || normalizedLink;
+    const linkPageName = normalizedLink.replace('.html', '');
+    
+    // Handle index.html and main page
+    if (linkPageName === "index" || linkPageName === "" || normalizedLink === "index.html") {
+      return currentPage === "" || currentPage === "index.html" || currentPageName === "index" || window.location.pathname.endsWith("/");
+    }
+    
+    // Check for exact match or if current page contains link page name
+    if (currentPageName === linkPageName) {
+      return true;
+    }
+    
+    // Special cases for main sections
+    const sectionMap = {
+      'certificate': 'certificate',
+      'spravka': 'spravka',
+      'contact': 'contact',
+      'order': 'order'
+    };
+    
+    if (sectionMap[linkPageName] && currentPageName.includes(sectionMap[linkPageName])) {
+      return true;
+    }
+    
+    return false;
   }
 
   toggleMobileMenu() {

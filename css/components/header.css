@@ -57,9 +57,21 @@
   margin-bottom: var(--space-4);
 }
 
+.logo-link {
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  text-decoration: none;
+}
+
+.logo-link:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
 .logo-img {
   height: 60px;
   width: auto;
+  cursor: pointer;
 }
 
 .logo-title {
