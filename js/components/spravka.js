@@ -106,7 +106,7 @@
         (link) => `
             <div class="detailed-link-item">
                 <div class="detailed-link-content">
-                    <div class="detailed-link-icon">&#128196;</div>
+                    <div class="detailed-link-icon">📄</div>
                     <div class="detailed-link-text">
                         <h3 class="detailed-link-title">
                             <a href="${link.link}" title="${link.description}">
