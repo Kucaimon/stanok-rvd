@@ -201,6 +201,7 @@
   resize: vertical;
   min-height: 120px;
   line-height: 1.5;
+  margin-bottom: var(--space-4);
 }
 
 .form-hint {
