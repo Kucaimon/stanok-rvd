@@ -198,7 +198,6 @@
   .hose-item {
     grid-template-columns: 1fr;
     gap: var(--space-4);
-    text-align: center;
   }
 
   .main-title-section {

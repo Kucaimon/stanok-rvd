@@ -90,7 +90,6 @@
   border: 2px solid var(--border-color);
   border-radius: 12px;
   padding: var(--space-6);
-  text-align: center;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -123,11 +122,12 @@
   max-width: 200px;
   height: 150px;
   object-fit: contain;
-  margin-bottom: var(--space-4);
+  margin: 0 auto var(--space-4);
   border-radius: 8px;
   padding: var(--space-2);
   background: var(--light-bg);
   transition: transform 0.3s ease;
+  display: block;
 }
 
 .hose-card:hover .hose-image {
