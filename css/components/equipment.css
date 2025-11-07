@@ -92,6 +92,7 @@
   border: 2px solid var(--border-color);
   border-radius: 12px;
   padding: var(--space-6);
+  text-align: center;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -124,9 +125,8 @@
   max-width: 200px;
   height: 120px;
   object-fit: contain;
-  margin: 0 auto var(--space-4);
+  margin-bottom: var(--space-4);
   border-radius: 4px;
-  display: block;
 }
 
 .brand-title {
