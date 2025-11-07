@@ -1,4 +1,74 @@
-<button class="mobile-menu-btn" aria-label="Открыть меню">☰</button>
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>СЕРТИФИКАТЫ | Оборудование и гидравлические комплектующие</title>
+    <meta
+      name="description"
+      content="СЕРТИФИКАТЫ VITILLO, SEMPERIT, FINN-POWER, D-HYDRO OY - официальная документация качества продукции"
+    />
+    <meta
+      name="keywords"
+      content="СЕРТИФИКАТЫ VITILLO, SEMPERIT, FINN-POWER, D-HYDRO OY, сертификаты качества РВД"
+    />
+    <meta name="author" content="Оборудование для производства РВД" />
+
+    <!-- SEO Meta -->
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="google-site-verification"
+      content="2gwipgjMtue_193bjyHTLF4ivt7yunKJEElbN7yJv0s"
+    />
+    <link rel="canonical" href="https://stanok-rvd.ru/certificate/" />
+    <link
+      rel="icon"
+      href="https://stanok-rvd.ru/media/favicon.png"
+      type="image/x-icon"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/base/reset.css" />
+    <link rel="stylesheet" href="../css/base/variables.css" />
+    <link rel="stylesheet" href="../css/components/header.css" />
+    <link rel="stylesheet" href="../css/components/navigation.css" />
+    <link rel="stylesheet" href="../css/components/footer.css" />
+    <link rel="stylesheet" href="../css/components/certificates.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__top">
+          <div class="contact-info">
+            <a href="tel:+89531747573" class="contact-phone"
+              >+7 (953) 174-75-73</a
+            >
+            <a href="mailto:stanok-rvd@mail.ru" class="contact-email"
+              >stanok-rvd@mail.ru</a
+            >
+          </div>
+        </div>
+
+        <div class="header__main">
+          <div class="logo-section">
+            <!-- Место для логотипа -->
+            <div class="logo-placeholder">
+              <a href="../index.html" class="logo-link">
+                <img src="../images/logo.png" alt="Логотип" class="logo-img" />
+              </a>
+            </div>
+            <h1 class="logo-title">СЕРТИФИКАТЫ</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+      <div class="container">
+        <button class="mobile-menu-btn" aria-label="Открыть меню">☰</button>
         <ul class="nav-list">
           <li><a href="../index.html" class="nav-link">О КОМПАНИИ</a></li>
           <li>
@@ -25,5 +95,68 @@
                   <li><a href="products/barboflex.html" class="nav-dropdown-item">BARBOFLEX</a></li>
                   <li><a href="products/uniflex.html" class="nav-dropdown-item">UNIFLEX</a></li>
                 </ul>
+              </li>
+              <li><a href="products/termozashita.html" class="nav-dropdown-item">ТЕРМОЗАЩИТА</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="certificate.html" class="nav-link">СЕРТИФИКАТЫ</a>
+          </li>
+          <li><a href="spravka.html" class="nav-link">СПРАВОЧНИК</a></li>
+          <li><a href="contact.html" class="nav-link">КОНТАКТЫ</a></li>
+          <li><a href="order.html" class="nav-link">ЗАКАЗ С САЙТА</a></li>
+        </ul>
       </div>
     </nav>
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs">
+      <div class="container">
+        <a href="../index.html" class="breadcrumb-link">продукция</a>
+        <span class="breadcrumb-separator">»</span>
+        <span class="breadcrumb-current">сертификаты</span>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="container">
+        <div class="certificates-grid" id="certificates-grid">
+          <!-- Certificates will be loaded by JS -->
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img
+              src="../images/logo.png"
+              alt="Логотип компании"
+              class="footer-logo-img"
+            />
+          </div>
+          <div class="footer-nav">
+            <a href="../index.html" class="footer-link">Главная</a>
+            <a href="certificate.html" class="footer-link"
+              >Сертификаты</a
+            >
+            <a href="spravka.html" class="footer-link">Справочник</a>
+            <a href="contact.html" class="footer-link">Контакты</a>
+            <a href="order.html" class="footer-link">Заказ с сайта</a>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          Copyright © 2011-2025. Оборудование для производства РВД
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/components/navigation.js"></script>
+    <script src="../js/components/certificates.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
