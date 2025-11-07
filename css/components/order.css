@@ -371,8 +371,12 @@
 
   .submit-button {
     width: 100%;
+    display: flex;
     justify-content: center;
+    align-items: center;
     padding: var(--space-3) var(--space-6);
+    text-align: center;
+    margin: 0 auto var(--space-3);
   }
 
   .order-info-section {
