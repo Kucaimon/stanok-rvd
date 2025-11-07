@@ -4,6 +4,7 @@
 @import url("./components/navigation.css");
 @import url("./components/footer.css");
 @import url("./components/products.css");
+@import url("./components/breadcrumbs.css");
 
 /* Additional global styles */
 body {
