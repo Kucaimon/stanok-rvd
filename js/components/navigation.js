@@ -45,35 +45,64 @@
   }
 
   isCurrentPage(linkPath, currentPath) {
-    // Get current page filename
+    // Get current page URL
+    const currentUrl = window.location.href;
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const currentPageName = currentPage.replace('.html', '');
     
-    // Normalize link path
-    let normalizedLink = linkPath.replace(/^\.\.\//g, "").replace(/^\.\//g, "");
-    normalizedLink = normalizedLink.split('/').pop() || normalizedLink;
-    const linkPageName = normalizedLink.replace('.html', '');
+    // Normalize link path - resolve relative paths
+    let normalizedLink = linkPath;
     
-    // Handle index.html and main page
-    if (linkPageName === "index" || linkPageName === "" || normalizedLink === "index.html") {
-      return currentPage === "" || currentPage === "index.html" || currentPageName === "index" || window.location.pathname.endsWith("/");
+    // Convert relative paths to absolute-like paths
+    if (normalizedLink.startsWith('../')) {
+      // Count ../ to determine depth
+      const depth = (normalizedLink.match(/\.\.\//g) || []).length;
+      const pathParts = window.location.pathname.split('/').filter(p => p);
+      const basePath = pathParts.slice(0, pathParts.length - depth).join('/');
+      normalizedLink = '/' + basePath + '/' + normalizedLink.replace(/\.\.\//g, '');
+    } else if (normalizedLink.startsWith('./')) {
+      normalizedLink = normalizedLink.replace('./', '');
     }
     
-    // Check for exact match or if current page contains link page name
-    if (currentPageName === linkPageName) {
+    // Remove leading/trailing slashes and get page name
+    normalizedLink = normalizedLink.replace(/^\/+|\/+$/g, '');
+    const linkPageName = normalizedLink.split('/').pop()?.replace('.html', '') || normalizedLink.replace('.html', '');
+    
+    // Handle main page (index.html or root)
+    if (linkPageName === "index" || linkPageName === "" || normalizedLink === "index.html" || normalizedLink.endsWith('/index.html')) {
+      return currentPage === "" || 
+             currentPage === "index.html" || 
+             currentPageName === "index" || 
+             window.location.pathname === "/" ||
+             window.location.pathname.endsWith("/") ||
+             window.location.pathname.endsWith("/index.html");
+    }
+    
+    // Check for exact match
+    if (currentPageName === linkPageName && linkPageName !== '') {
       return true;
     }
     
-    // Special cases for main sections
-    const sectionMap = {
-      'certificate': 'certificate',
-      'spravka': 'spravka',
-      'contact': 'contact',
-      'order': 'order'
-    };
-    
-    if (sectionMap[linkPageName] && currentPageName.includes(sectionMap[linkPageName])) {
-      return true;
+    // Check if current URL contains the link path
+    if (currentUrl.includes(normalizedLink.replace(/\.html$/, ''))) {
+      // Special handling for main sections
+      const mainSections = {
+        'certificate': ['certificate'],
+        'spravka': ['spravka', 'thread-guide', 'manufacturing-rvd', 'rvd-recommendations', 'rvd-lifespan', 'hose-selection', 'hose-installation', 'gost-6286-73', 'gost-25452-90', 'pressure-units'],
+        'contact': ['contact'],
+        'order': ['order']
+      };
+      
+      for (const [section, pages] of Object.entries(mainSections)) {
+        if (linkPageName === section && pages.some(page => currentPageName.includes(page))) {
+          return true;
+        }
+      }
+      
+      // For other cases, check if the link path is in the current URL
+      if (normalizedLink && currentUrl.includes(normalizedLink)) {
+        return true;
+      }
     }
     
     return false;
