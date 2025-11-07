@@ -1,6 +1,60 @@
-<button class="mobile-menu-btn" aria-label="Открыть меню">☰</button>
-        
-              
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ЗАКАЗ С САЙТА | Оборудование и гидравлические комплектующие</title>
+    <meta
+      name="description"
+      content="Оформите заказ на оборудование и гидравлические комплектующие для РВД через форму на сайте"
+    />
+    <meta
+      name="keywords"
+      content="заказ РВД, заказ оборудования, заказ фитингов, заказ рукавов высокого давления"
+    />
+    <meta name="author" content="Оборудование для производства РВД" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://stanok-rvd.ru/order/" />
+    <link rel="stylesheet" href="../css/base/reset.css" />
+    <link rel="stylesheet" href="../css/base/variables.css" />
+    <link rel="stylesheet" href="../css/components/header.css" />
+    <link rel="stylesheet" href="../css/components/navigation.css" />
+    <link rel="stylesheet" href="../css/components/footer.css" />
+    <link rel="stylesheet" href="../css/components/order.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__top">
+          <div class="contact-info">
+            <a href="tel:+89531747573" class="contact-phone"
+              >+7 (953) 174-75-73</a
+            >
+            <a href="mailto:stanok-rvd@mail.ru" class="contact-email"
+              >stanok-rvd@mail.ru</a
+            >
+          </div>
+        </div>
+
+        <div class="header__main">
+          <div class="logo-section">
+            <div class="logo-placeholder">
+              <a href="../index.html" class="logo-link">
+                <img src="../images/logo.png" alt="Логотип" class="logo-img" />
+              </a>
+            </div>
+            <h1 class="logo-title">ЗАКАЗ С САЙТА</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+      <div class="container">
+        <button class="mobile-menu-btn" aria-label="Открыть меню">☰</button>
         <ul class="nav-list">
           <li><a href="../index.html" class="nav-link">О КОМПАНИИ</a></li>
           <li>
@@ -27,5 +81,162 @@
                   <li><a href="products/barboflex.html" class="nav-dropdown-item">BARBOFLEX</a></li>
                   <li><a href="products/uniflex.html" class="nav-dropdown-item">UNIFLEX</a></li>
                 </ul>
+              </li>
+              <li><a href="products/termozashita.html" class="nav-dropdown-item">ТЕРМОЗАЩИТА</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="certificate.html" class="nav-link">СЕРТИФИКАТЫ</a>
+          </li>
+          <li><a href="spravka.html" class="nav-link">СПРАВОЧНИК</a></li>
+          <li><a href="contact.html" class="nav-link">КОНТАКТЫ</a></li>
+          <li><a href="order.html" class="nav-link">ЗАКАЗ С САЙТА</a></li>
+        </ul>
       </div>
     </nav>
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs">
+      <div class="container">
+        <a href="../index.html" class="breadcrumb-link">продукция</a>
+        <span class="breadcrumb-separator">»</span>
+        <span class="breadcrumb-current">заказ с сайта</span>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="container">
+        <div class="order-content">
+          <!-- Order Info Section -->
+          <section class="order-info-section">
+            <h2 class="section-title">Как оформить заказ</h2>
+            <div class="info-cards">
+              <div class="info-card">
+                <span class="info-icon">📝</span>
+                <h3 class="info-title">Заполните форму</h3>
+                <p class="info-description">
+                  Укажите ваши контактные данные и описание требуемой продукции
+                </p>
+              </div>
+              <div class="info-card">
+                <span class="info-icon">✉️</span>
+                <h3 class="info-title">Отправьте запрос</h3>
+                <p class="info-description">
+                  Нажмите кнопку "Отправить" и мы получим ваше сообщение
+                </p>
+              </div>
+              <div class="info-card">
+                <span class="info-icon">📞</span>
+                <h3 class="info-title">Получите ответ</h3>
+                <p class="info-description">
+                  Наш специалист свяжется с вами в течение 10-20 минут
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Order Form Section -->
+          <section class="order-form-section">
+            <h2 class="section-title">Форма заказа</h2>
+            <form id="orderForm" class="order-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="lad_name_form" class="form-label">Ваше имя *</label>
+                  <input
+                    type="text"
+                    id="lad_name_form"
+                    name="name"
+                    class="form-input"
+                    required
+                    placeholder="Иван Иванов"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="lad_phon_form" class="form-label">Телефон *</label>
+                  <input
+                    type="tel"
+                    id="lad_phon_form"
+                    name="phone"
+                    class="form-input"
+                    required
+                    placeholder="+7 (999) 123-45-67"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="lad_mylo_form" class="form-label">Email *</label>
+                  <input
+                    type="email"
+                    id="lad_mylo_form"
+                    name="email"
+                    class="form-input"
+                    required
+                    placeholder="example@mail.ru"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="lad_org_form" class="form-label">Организация</label>
+                  <input
+                    type="text"
+                    id="lad_org_form"
+                    name="organization"
+                    class="form-input"
+                    placeholder="Название компании"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="lad_mess_form" class="form-label">Сообщение *</label>
+                <textarea
+                  id="lad_mess_form"
+                  name="message"
+                  class="form-textarea"
+                  required
+                  rows="6"
+                  placeholder="Опишите требуемую продукцию, количество, условия поставки и другие детали..."
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="submit-button">
+                  Отправить заказ
+                </button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img
+              src="../images/logo.png"
+              alt="Логотип компании"
+              class="footer-logo-img"
+            />
+          </div>
+          <div class="footer-nav">
+            <a href="../index.html" class="footer-link">Главная</a>
+            <a href="certificate.html" class="footer-link">Сертификаты</a>
+            <a href="spravka.html" class="footer-link">Справочник</a>
+            <a href="contact.html" class="footer-link">Контакты</a>
+            <a href="order.html" class="footer-link">Заказ с сайта</a>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          Copyright © 2011-2025. Оборудование для производства РВД
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/components/navigation.js"></script>
+    <script src="../js/components/order.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
