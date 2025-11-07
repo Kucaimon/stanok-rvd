@@ -6,12 +6,14 @@
   padding: var(--space-8);
   margin-bottom: var(--space-8);
   line-height: 1.7;
+  text-align: center;
 }
 
 .product-description > p {
   margin-bottom: var(--space-6);
   font-size: var(--font-size-base);
   color: var(--industrial-gray);
+  text-align: center;
 }
 
 .product-features {
@@ -62,6 +64,7 @@
   font-weight: 600;
   color: var(--primary-green);
   margin-bottom: var(--space-4);
+  text-align: center;
 }
 
 .product-recommendations {
