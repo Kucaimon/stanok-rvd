@@ -27,80 +27,159 @@
   }
 
   setActiveMenuItem() {
+    const currentUrl = window.location.href;
     const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll(".nav-link");
+    const currentPage = currentPath.split('/').pop() || 'index.html';
+    const currentPageName = currentPage.replace('.html', '');
+    
+    // Remove all active states
+    document.querySelectorAll(".nav-link").forEach(link => {
+      link.classList.remove("nav-link--active");
+    });
+    document.querySelectorAll(".nav-dropdown-item").forEach(item => {
+      item.classList.remove("nav-dropdown-item--active");
+    });
+    document.querySelectorAll(".nav-list > li").forEach(li => {
+      li.classList.remove("active-parent");
+    });
 
-    navLinks.forEach((link) => {
+    let activeFound = false;
+    let activeParent = null;
+
+    // Check main navigation links first
+    document.querySelectorAll(".nav-link").forEach((link) => {
       const linkPath = link.getAttribute("href");
-      if (linkPath) {
-        // Remove active class from all links
-        link.classList.remove("nav-link--active");
-
-        // Check if current page matches link
-        if (this.isCurrentPage(linkPath, currentPath)) {
+      if (linkPath && !activeFound) {
+        if (this.isExactPageMatch(linkPath, currentPath, currentPageName)) {
           link.classList.add("nav-link--active");
+          activeFound = true;
+          return;
         }
       }
     });
+
+    // Check dropdown items if no main link is active
+    if (!activeFound) {
+      document.querySelectorAll(".nav-dropdown-item").forEach((item) => {
+        const itemPath = item.getAttribute("href");
+        if (itemPath && !activeFound) {
+          if (this.isExactPageMatch(itemPath, currentPath, currentPageName)) {
+            item.classList.add("nav-dropdown-item--active");
+            // Mark parent as active
+            const parentLi = item.closest(".nav-list > li");
+            if (parentLi) {
+              parentLi.classList.add("active-parent");
+              const parentLink = parentLi.querySelector(".nav-link");
+              if (parentLink) {
+                parentLink.classList.add("nav-link--active");
+              }
+            }
+            activeFound = true;
+            activeParent = parentLi;
+            return;
+          }
+        }
+      });
+    }
+
+    // Check nested dropdown items (for equipment manufacturers)
+    if (!activeFound) {
+      document.querySelectorAll(".nav-dropdown-nested .nav-dropdown-item").forEach((item) => {
+        const itemPath = item.getAttribute("href");
+        if (itemPath && !activeFound) {
+          if (this.isExactPageMatch(itemPath, currentPath, currentPageName)) {
+            item.classList.add("nav-dropdown-item--active");
+            // Mark all parents as active
+            const nestedParent = item.closest(".nav-dropdown-item.has-nested");
+            if (nestedParent) {
+              nestedParent.classList.add("nav-dropdown-item--active");
+            }
+            const parentLi = item.closest(".nav-list > li");
+            if (parentLi) {
+              parentLi.classList.add("active-parent");
+              const parentLink = parentLi.querySelector(".nav-link");
+              if (parentLink) {
+                parentLink.classList.add("nav-link--active");
+              }
+            }
+            activeFound = true;
+            return;
+          }
+        }
+      });
+    }
   }
 
-  isCurrentPage(linkPath, currentPath) {
-    // Get current page URL
-    const currentUrl = window.location.href;
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    const currentPageName = currentPage.replace('.html', '');
+  isExactPageMatch(linkPath, currentPath, currentPageName) {
+    if (!linkPath) return false;
     
-    // Normalize link path - resolve relative paths
+    // Normalize link path
     let normalizedLink = linkPath;
     
-    // Convert relative paths to absolute-like paths
+    // Resolve relative paths
     if (normalizedLink.startsWith('../')) {
-      // Count ../ to determine depth
       const depth = (normalizedLink.match(/\.\.\//g) || []).length;
-      const pathParts = window.location.pathname.split('/').filter(p => p);
+      const pathParts = currentPath.split('/').filter(p => p);
       const basePath = pathParts.slice(0, pathParts.length - depth).join('/');
       normalizedLink = '/' + basePath + '/' + normalizedLink.replace(/\.\.\//g, '');
     } else if (normalizedLink.startsWith('./')) {
       normalizedLink = normalizedLink.replace('./', '');
     }
     
-    // Remove leading/trailing slashes and get page name
+    // Normalize paths
     normalizedLink = normalizedLink.replace(/^\/+|\/+$/g, '');
     const linkPageName = normalizedLink.split('/').pop()?.replace('.html', '') || normalizedLink.replace('.html', '');
     
-    // Handle main page (index.html or root)
-    if (linkPageName === "index" || linkPageName === "" || normalizedLink === "index.html" || normalizedLink.endsWith('/index.html')) {
-      return currentPage === "" || 
-             currentPage === "index.html" || 
-             currentPageName === "index" || 
+    // Handle index page
+    if (linkPageName === "index" || linkPageName === "" || normalizedLink === "index.html") {
+      return currentPageName === "index" || 
+             currentPageName === "" || 
              window.location.pathname === "/" ||
              window.location.pathname.endsWith("/") ||
-             window.location.pathname.endsWith("/index.html");
+             currentPath.endsWith("/index.html");
     }
     
-    // Check for exact match
+    // Exact page name match
     if (currentPageName === linkPageName && linkPageName !== '') {
       return true;
     }
     
-    // Check if current URL contains the link path
-    if (currentUrl.includes(normalizedLink.replace(/\.html$/, ''))) {
-      // Special handling for main sections
-      const mainSections = {
+    // Check if current path includes the link path (for nested pages)
+    const currentPathNormalized = currentPath.replace(/^\/+|\/+$/g, '').toLowerCase();
+    const linkPathNormalized = normalizedLink.toLowerCase();
+    
+    // For product pages, check if current path contains the link path
+    if (currentPathNormalized.includes(linkPathNormalized) && linkPathNormalized.length > 0) {
+      // Special cases for main sections
+      const sectionMappings = {
         'certificate': ['certificate'],
         'spravka': ['spravka', 'thread-guide', 'manufacturing-rvd', 'rvd-recommendations', 'rvd-lifespan', 'hose-selection', 'hose-installation', 'gost-6286-73', 'gost-25452-90', 'pressure-units'],
         'contact': ['contact'],
-        'order': ['order']
+        'order': ['order'],
+        'high-pressure-hoses': ['high-pressure-hoses', 'en853-1sn', 'en853-2sn', 'en856-4sp', 'en856-4sh', 'en856-r13', 'en856-r15'],
+        'fittings': ['fittings', 'fitingi', 'bsp', 'jic', 'orfs', 'dkol', 'dkos', 'sfl', 'sfs', 'banjo', 'jis', 'nptf', 'bspt', 'vtulki'],
+        'equipment': ['equipment', 'finnpower', 'd-hydro', 'op', 'samway', 'barboflex', 'uniflex'],
+        'industrial-hoses': ['industrial-hoses', 'steam', 'oil', 'fuel', 'abradant'],
+        'teflon-hoses': ['teflon-hoses', 'rvd_ptfe', 'rvd_gwm'],
+        'thermoplastic-hoses': ['thermoplastic-hoses', 'sae_100', 'mt_'],
+        'parker-hoses': ['parker-hoses', '371lt', '461lt'],
+        'quick-connections': ['quick-connections', 'brs'],
+        'ball-valves': ['ball-valves', 'valves'],
+        'pipe-connections': ['pipe-connections'],
+        'cutting-disks': ['cutting-disks', 'disks']
       };
       
-      for (const [section, pages] of Object.entries(mainSections)) {
-        if (linkPageName === section && pages.some(page => currentPageName.includes(page))) {
-          return true;
+      // Check section mappings
+      for (const [section, patterns] of Object.entries(sectionMappings)) {
+        if (linkPageName === section || linkPathNormalized.includes(section)) {
+          if (patterns.some(pattern => currentPathNormalized.includes(pattern))) {
+            return true;
+          }
         }
       }
       
-      // For other cases, check if the link path is in the current URL
-      if (normalizedLink && currentUrl.includes(normalizedLink)) {
+      // Direct path match
+      if (currentPathNormalized.includes(linkPathNormalized)) {
         return true;
       }
     }
