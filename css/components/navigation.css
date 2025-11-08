@@ -123,6 +123,30 @@
   color: var(--industrial-gray);
 }
 
+.nav-dropdown-item.has-nested {
+  cursor: default;
+  pointer-events: none;
+}
+
+.nav-dropdown-item.has-nested:hover {
+  cursor: default;
+  background: var(--light-bg);
+  padding-left: var(--space-4);
+}
+
+/* Style for span with nav-dropdown-item class */
+span.nav-dropdown-item {
+  display: block;
+  padding: var(--space-3) var(--space-4);
+  color: var(--industrial-gray);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  cursor: default;
+}
+
 .nav-link:hover {
   background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
   color: var(--white);
