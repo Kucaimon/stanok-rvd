@@ -118,35 +118,56 @@
 /* Hoses tables specific styles */
 .hoses-table-container {
   overflow-x: auto;
-  margin: var(--space-8) 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  margin: var(--space-6) 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: white;
 }
 
 .hoses-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   background: white;
   font-size: 0.9rem;
   min-width: 800px;
 }
 
 .hoses-table th {
-  background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
   color: white;
   font-weight: 600;
   text-align: center;
-  padding: var(--space-4);
-  border: 1px solid var(--border-color);
+  padding: var(--space-4) var(--space-3);
+  border: none;
+  border-bottom: 2px solid var(--dark-green);
   position: sticky;
   top: 0;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hoses-table th:first-child {
+  border-top-left-radius: 12px;
+}
+
+.hoses-table th:last-child {
+  border-top-right-radius: 12px;
 }
 
 .hoses-table td {
-  padding: var(--space-3);
+  padding: var(--space-3) var(--space-2);
   text-align: center;
-  border: 1px solid var(--border-color);
-  transition: background-color 0.2s;
+  border-bottom: 1px solid #e2e8f0;
+  border-right: 1px solid #f1f5f9;
+  transition: all 0.2s ease;
+  color: var(--industrial-gray);
+}
+
+.hoses-table td:last-child {
+  border-right: none;
 }
 
 .hoses-table tbody tr:nth-child(even) {
@@ -155,10 +176,23 @@
 
 .hoses-table tbody tr:hover {
   background: #e0f2fe;
+  transform: scale(1.01);
 }
 
 .hoses-table tbody tr:nth-child(even):hover {
   background: #dbeafe;
+}
+
+.hoses-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
+}
+
+.hoses-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
+}
+
+.hoses-table tbody tr:last-child td {
+  border-bottom: none;
 }
 
 /* Header rows styling */
