@@ -202,6 +202,60 @@
   margin-bottom: var(--space-8);
 }
 
+.quick-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+  justify-content: center;
+  justify-items: center;
+}
+
+.quick-action-card {
+  background: var(--white);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: var(--space-6);
+  text-align: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 320px;
+}
+
+.quick-action-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-green);
+  text-decoration: none;
+  color: inherit;
+}
+
+.quick-action-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-4);
+  display: block;
+}
+
+.quick-action-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--industrial-gray);
+  margin-bottom: var(--space-3);
+  line-height: 1.3;
+}
+
+.quick-action-description {
+  color: var(--metal-dark);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-4);
+  line-height: 1.5;
+  text-align: center;
+}
+
 .actions-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -297,6 +351,16 @@
     gap: var(--space-4);
   }
 
+  .quick-actions-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+    justify-items: center;
+  }
+
+  .quick-action-card {
+    max-width: 100%;
+  }
+
   .actions-grid {
     grid-template-columns: 1fr;
     gap: var(--space-4);
@@ -328,6 +392,15 @@
     padding: var(--space-3);
   }
 
+  .quick-action-card {
+    padding: var(--space-3);
+  }
+
+  .quick-action-icon {
+    font-size: 2rem;
+    margin-bottom: var(--space-3);
+  }
+
   .action-card {
     padding: var(--space-3);
   }
@@ -343,6 +416,10 @@
   }
 
   .contact-card-title {
+    font-size: var(--font-size-base);
+  }
+
+  .quick-action-title {
     font-size: var(--font-size-base);
   }
 
