@@ -23,7 +23,21 @@
 
       // Set active menu item based on current page
       this.setActiveMenuItem();
+      
+      // Prevent click on span elements with has-nested class
+      this.preventSpanClicks();
     }
+  }
+
+  preventSpanClicks() {
+    // Prevent navigation when clicking on span elements with has-nested class
+    document.querySelectorAll('span.nav-dropdown-item.has-nested').forEach(span => {
+      span.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      });
+    });
   }
 
   setActiveMenuItem() {

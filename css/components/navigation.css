@@ -109,8 +109,9 @@
   position: relative;
 }
 
-/* Show nested dropdown when hovering over the parent li */
-.nav-dropdown > li:hover > .nav-dropdown-nested {
+/* Show nested dropdown when hovering over the parent li or the span */
+.nav-dropdown > li:hover > .nav-dropdown-nested,
+.nav-dropdown > li:has(span.has-nested):hover > .nav-dropdown-nested {
   opacity: 1;
   visibility: visible;
   display: block;
@@ -148,13 +149,9 @@ span.nav-dropdown-item {
   padding-left: var(--space-4);
 }
 
-/* Prevent click on span but allow hover events to pass through */
+/* Allow hover on span for nested menu, but prevent navigation */
 span.nav-dropdown-item.has-nested {
   pointer-events: auto;
-}
-
-span.nav-dropdown-item.has-nested:active {
-  pointer-events: none;
 }
 
 .nav-link:hover {
