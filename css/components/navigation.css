@@ -101,32 +101,18 @@
   transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
   z-index: 1002;
   border-left: 2px solid var(--primary-green);
-  max-height: 50vh;
-  overflow-y: auto;
 }
 
 .nav-dropdown-item.has-nested {
   position: relative;
 }
 
-/* Show nested dropdown when hovering over the parent li or the span */
-.nav-dropdown > li:hover > .nav-dropdown-nested,
-.nav-dropdown > li:has(span.has-nested):hover > .nav-dropdown-nested {
+/* Show nested dropdown when hovering over the parent li */
+.nav-dropdown > li:hover > .nav-dropdown-nested {
   opacity: 1;
   visibility: visible;
   display: block;
   transform: translateX(0);
-}
-
-.nav-dropdown-item.has-nested::after {
-  content: '›';
-  position: absolute;
-  right: var(--space-4);
-  color: var(--industrial-gray);
-}
-
-.nav-dropdown-item.has-nested {
-  cursor: default;
 }
 
 /* Style for span with nav-dropdown-item class */
@@ -144,14 +130,9 @@ span.nav-dropdown-item {
 }
 
 /* When hovering over parent li, highlight the span */
-.nav-dropdown > li:hover > span.nav-dropdown-item.has-nested {
+.nav-dropdown > li:hover > span.nav-dropdown-item {
   background: var(--light-bg);
-  padding-left: var(--space-4);
-}
-
-/* Allow hover on span for nested menu, but prevent navigation */
-span.nav-dropdown-item.has-nested {
-  pointer-events: auto;
+  color: var(--primary-green);
 }
 
 .nav-link:hover {
@@ -267,8 +248,7 @@ span.nav-dropdown-item.has-nested {
     border-left: 2px solid var(--primary-green);
   }
 
-  .nav-dropdown > li:hover > .nav-dropdown-nested,
-  .nav-dropdown > li:has(.has-nested):hover > .nav-dropdown-nested {
+  .nav-dropdown > li:hover > .nav-dropdown-nested {
     display: block;
   }
 }
