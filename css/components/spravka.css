@@ -244,6 +244,13 @@
   letter-spacing: 0.5px;
 }
 
+/* Spravka Search (main search on spravka page) */
+.spravka-search {
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-8);
+  padding: var(--space-4) 0;
+}
+
 /* Search Section */
 .search-section {
   background: var(--light-bg);
@@ -302,6 +309,11 @@
 
   .spravka-content {
     padding: var(--space-6) 0;
+  }
+
+  .spravka-search {
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-6);
   }
 
   .section-title {
