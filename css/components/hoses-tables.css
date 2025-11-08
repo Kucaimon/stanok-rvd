@@ -14,7 +14,9 @@
   color: var(--industrial-gray);
 }
 
-.product-features {
+.product-features,
+.product-standards,
+.product-compatibility {
   margin: var(--space-6) 0;
   padding: var(--space-5);
   background: var(--light-bg);
@@ -27,15 +29,39 @@
   color: var(--industrial-gray);
 }
 
-.product-features ul {
+.product-features ul,
+.product-standards ul,
+.product-compatibility ul {
   list-style: disc;
   padding-left: var(--space-6);
   margin: 0;
+  text-align: left;
 }
 
-.product-features li {
+.product-features li,
+.product-standards li,
+.product-compatibility li {
   margin-bottom: var(--space-2);
   line-height: 1.6;
+  text-align: left;
+}
+
+.product-standards h3,
+.product-compatibility h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--primary-green);
+  margin-bottom: var(--space-4);
+}
+
+.product-compatibility p {
+  margin-bottom: var(--space-4);
+  line-height: 1.7;
+  text-align: left;
+}
+
+.product-compatibility p:last-child {
+  margin-bottom: 0;
 }
 
 .product-image {

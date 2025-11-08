@@ -202,12 +202,14 @@
   list-style: disc;
   padding-left: var(--space-6);
   margin: 0;
+  text-align: left;
 }
 
 .product-features li,
 .product-standards li {
   margin-bottom: var(--space-2);
   line-height: 1.6;
+  text-align: left;
 }
 
 .product-compatibility p {
