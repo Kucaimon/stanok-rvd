@@ -212,6 +212,12 @@ class CuttingDisksPage {
         link: "disks/yl_80.html",
         description: "Отрезной диск YEONG LONG YL-80 275x25.4x3",
       },
+      {
+        title: "ДИСК HYDROSCAND 200x25.4x3",
+        image: "https://stanok-rvd.ru/disk/titul.png",
+        link: "disks/hydroscand.html",
+        description: "Отрезной диск HYDROSCAND 200x25.4x3",
+      },
     ];
 
     this.init();
