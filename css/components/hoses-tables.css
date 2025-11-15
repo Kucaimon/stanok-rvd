@@ -135,20 +135,22 @@
 }
 
 .hoses-table th {
-  background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%) !important;
   color: white !important;
-  font-weight: 700;
-  text-align: center;
-  padding: var(--space-4) var(--space-3);
-  border: none;
-  border-bottom: 3px solid var(--dark-green);
+  font-weight: 700 !important;
+  text-align: center !important;
+  padding: var(--space-4) var(--space-3) !important;
+  border: none !important;
+  border-bottom: 3px solid var(--dark-green) !important;
   position: sticky;
   top: 0;
   z-index: 10;
-  font-size: 0.95rem;
+  font-size: 0.95rem !important;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   line-height: 1.4;
+  display: table-cell !important;
+  visibility: visible !important;
 }
 
 .hoses-table th:first-child {
