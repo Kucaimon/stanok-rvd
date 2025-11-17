@@ -368,6 +368,81 @@
   line-height: 1.5;
 }
 
+/* Route detail pages */
+.route-page {
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 70%, #fdf2f8 100%);
+}
+
+.route-content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.route-section {
+  text-align: left;
+}
+
+.route-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--primary-green);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: var(--space-3);
+}
+
+.route-description {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto var(--space-6);
+  color: var(--metal-dark);
+  line-height: 1.6;
+}
+
+.route-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  color: var(--metal-dark);
+}
+
+.route-list strong {
+  color: var(--industrial-gray);
+}
+
+.route-map {
+  margin-top: var(--space-10);
+}
+
+.route-map-title {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: var(--space-4);
+  color: var(--industrial-gray);
+}
+
+.map-frame {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.12);
+}
+
+.route-back {
+  margin-top: var(--space-8);
+  text-align: center;
+}
+
+.route-back .action-button {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
 .action-buttons {
   display: flex;
   flex-direction: column;
