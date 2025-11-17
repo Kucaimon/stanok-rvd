@@ -10,18 +10,25 @@
   }
 
   initAddressAccordion() {
-    const toggle = document.querySelector(".contact-address-toggle");
-    const panel = document.querySelector(".contact-address-panel");
-    const icon = document.querySelector(".contact-card-toggle-icon");
+    const card = document.querySelector(".contact-card-address");
+    if (!card) return;
+
+    const toggle = card.querySelector(".contact-address-toggle");
+    const panel = card.querySelector(".contact-address-panel");
+    const icon = card.querySelector(".contact-card-toggle-icon");
 
     if (!toggle || !panel || !icon) {
       return;
     }
 
+    panel.setAttribute("aria-hidden", "true");
+
     toggle.addEventListener("click", () => {
-      const expanded = panel.classList.toggle("active");
-      icon.textContent = expanded ? "⟰" : "⟱";
+      const expanded = !card.classList.contains("is-open");
+      card.classList.toggle("is-open", expanded);
       panel.setAttribute("aria-hidden", (!expanded).toString());
+      toggle.setAttribute("aria-expanded", expanded.toString());
+      icon.textContent = expanded ? "⟰" : "⟱";
     });
   }
 

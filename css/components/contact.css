@@ -180,11 +180,20 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border: none;
+  border: 2px dashed transparent;
   background: transparent;
   cursor: pointer;
-  padding: 0;
+  padding: var(--space-2);
   gap: var(--space-2);
+  width: 100%;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.contact-card-content.contact-address-toggle:focus-visible {
+  border-color: var(--primary-green);
+  background: rgba(34, 197, 94, 0.08);
+  outline: none;
 }
 
 .contact-card-toggle-icon {
@@ -192,14 +201,14 @@
   color: var(--primary-green);
 }
 
-.contact-address-panel {
+.contact-card-address .contact-address-panel {
   margin-top: var(--space-4);
   border-top: 1px solid var(--border-color);
   padding-top: var(--space-4);
   display: none;
 }
 
-.contact-address-panel.active {
+.contact-card-address.is-open .contact-address-panel {
   display: grid;
   gap: var(--space-4);
 }
