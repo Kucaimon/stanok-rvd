@@ -125,6 +125,90 @@
   text-align: left;
 }
 
+.contact-card--address {
+  text-align: left;
+}
+
+.address-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.address-switcher__btn {
+  flex: 1;
+  min-width: 140px;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--white);
+  padding: var(--space-2) var(--space-3);
+  font-weight: 600;
+  color: var(--industrial-gray);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.address-switcher__btn.active {
+  border-color: var(--primary-green);
+  background: rgba(34, 197, 94, 0.08);
+  color: var(--primary-green);
+}
+
+.address-details {
+  display: none;
+  background: var(--light-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: var(--space-4);
+}
+
+.address-details.active {
+  display: block;
+  animation: fadeIn 0.2s ease;
+}
+
+.address-details__title {
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  color: var(--industrial-gray);
+  margin-bottom: var(--space-3);
+}
+
+.address-details__list {
+  margin: 0 0 var(--space-3) 0;
+  padding-left: var(--space-4);
+  color: var(--metal-dark);
+  line-height: 1.5;
+}
+
+.address-details__list li {
+  margin-bottom: var(--space-2);
+}
+
+.address-details__list strong {
+  color: var(--industrial-gray);
+}
+
+.address-details__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--primary-green);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.address-details__link::after {
+  content: "↗";
+  font-size: 0.9em;
+}
+
+.address-details__link:hover {
+  color: var(--dark-green);
+}
+
 .contact-phone-large {
   display: block;
   font-size: var(--font-size-xl);
@@ -368,6 +452,10 @@
 
   .contact-card {
     padding: var(--space-4);
+  }
+
+  .address-switcher {
+    flex-direction: column;
   }
 
   .action-card {

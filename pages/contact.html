@@ -149,17 +149,87 @@
                 </div>
               </div>
 
-              <div class="contact-card">
+              <div class="contact-card contact-card--address" data-address-card>
                 <span class="contact-card-icon">📍</span>
-                <h3 class="contact-card-title">Адрес</h3>
+                <h3 class="contact-card-title">Адрес и представительства</h3>
                 <div class="contact-card-content">
-                  <address class="contact-address">
-                    Россия<br />
-                    Москва
-                  </address>
                   <p class="contact-card-description">
-                    Доставка по всей России через транспортные компании
+                    Выберите город, чтобы увидеть адрес, телефоны и схему проезда.
                   </p>
+                  <div class="address-switcher" role="tablist">
+                    <button
+                      class="address-switcher__btn active"
+                      data-location="moscow"
+                      type="button"
+                    >
+                      Москва / Мытищи
+                    </button>
+                    <button
+                      class="address-switcher__btn"
+                      data-location="spb"
+                      type="button"
+                    >
+                      Санкт-Петербург
+                    </button>
+                  </div>
+                  <div class="address-details active" data-location-panel="moscow">
+                    <p class="address-details__title">
+                      Представительство в Москве, г. Мытищи
+                    </p>
+                    <ul class="address-details__list">
+                      <li>
+                        <strong>Адрес:</strong> Москва, г. Мытищи, проезд 159, вл. 4,
+                        стр. 1
+                      </li>
+                      <li><strong>Телефон офиса:</strong> +7 (495) 956-39-58</li>
+                      <li>
+                        <strong>Телефон:</strong> +7 (953) 174-75-73 MAX / WhatsApp /
+                        Telegram
+                      </li>
+                      <li>
+                        <strong>Email:</strong>
+                        <a href="mailto:stanok-rvd@mail.ru">stanok-rvd@mail.ru</a>
+                      </li>
+                    </ul>
+                    <a
+                      class="address-details__link"
+                      href="https://stanok-rvd.ru/contact/moskva/"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      Адрес и схема проезда в Москве
+                    </a>
+                  </div>
+                  <div class="address-details" data-location-panel="spb">
+                    <p class="address-details__title">
+                      Офис и склад в Санкт-Петербурге
+                    </p>
+                    <ul class="address-details__list">
+                      <li>
+                        <strong>Адрес склада:</strong> 196641, СПб, пос. Металлострой,
+                        дорога на Металлострой, дом 1, корп. 4, литера А
+                      </li>
+                      <li>
+                        <strong>Телефон отдела продаж:</strong> +7 (812) 600-22-99
+                      </li>
+                      <li>
+                        <strong>Телефон:</strong> +7 (953) 174-75-73 MAX / WhatsApp /
+                        Telegram
+                      </li>
+                      <li>
+                        <strong>Email:</strong>
+                        <a href="mailto:stanok-rvd@mail.ru">stanok-rvd@mail.ru</a>
+                      </li>
+                    </ul>
+                    <a
+                      class="address-details__link"
+                      href="https://stanok-rvd.ru/contact/spb/"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      Адрес склада и схема проезда в Санкт-Петербурге
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
