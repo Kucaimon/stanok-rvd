@@ -2,6 +2,7 @@
   constructor() {
     this.mobileMenuBtn = document.querySelector(".mobile-menu-btn");
     this.navList = document.querySelector(".nav-list");
+    this.rootPrefix = this.getRootPrefix();
     this.init();
   }
 
@@ -21,11 +22,144 @@
         }
       });
 
+      this.buildProductsDropdown();
+
       // Set active menu item based on current page
       this.setActiveMenuItem();
       
       // Prevent click on span elements with has-nested class
       this.preventSpanClicks();
+  getRootPrefix() {
+    const path = window.location.pathname
+      ? window.location.pathname.replace(/\\/g, "/")
+      : "";
+    const pagesIndex = path.lastIndexOf("/pages/");
+
+    if (pagesIndex !== -1) {
+      const afterPages = path.slice(pagesIndex + "/pages/".length);
+      const segments = afterPages.split("/").filter(Boolean);
+      return "../".repeat(segments.length || 0);
+    }
+
+    const trimmed = path.replace(/^\//, "");
+    const segments = trimmed.split("/").filter(Boolean);
+    return segments.length > 1 ? "../".repeat(segments.length - 1) : "";
+  }
+
+  resolveLink(href) {
+    if (!href) {
+      return "#";
+    }
+
+    if (/^(https?:)?\/\//i.test(href)) {
+      return href;
+    }
+
+    const normalized = href.replace(/^\/+/, "");
+    return `${this.rootPrefix}${normalized}`;
+  }
+
+  getProductCatalogs() {
+    return [
+      {
+        title: "Рукава высокого давления",
+        link: "pages/products/high-pressure-hoses.html",
+      },
+      {
+        title: "Фитинги и муфты для РВД",
+        link: "pages/products/fittings.html",
+      },
+      {
+        title: "Промышленные рукава",
+        link: "pages/products/industrial-hoses.html",
+      },
+      {
+        title: "Тефлоновые рукава",
+        link: "pages/products/teflon-hoses.html",
+      },
+      {
+        title: "Термопластиковые рукава",
+        link: "pages/products/thermoplastic-hoses.html",
+      },
+      {
+        title: "Морозостойкие рукава Parker",
+        link: "pages/products/parker-hoses.html",
+      },
+      {
+        title: "Каналопромывочные рукава",
+        link: "pages/products/kanalopromyvochnye-hoses.html",
+      },
+      {
+        title: "Термо защита рукава",
+        link: "pages/products/termozashita.html",
+      },
+      {
+        title: "Быстроразъёмные соединения (БРС)",
+        link: "pages/products/quick-connections.html",
+      },
+      {
+        title: "Краны шаровые высокого давления",
+        link: "pages/products/ball-valves.html",
+      },
+      {
+        title: "Трубные соединения DIN2353",
+        link: "pages/products/pipe-connections.html",
+      },
+      {
+        title: "Обрезные диски для РВД",
+        link: "pages/products/cutting-disks.html",
+      },
+      {
+        title: "Barboflex оборудование",
+        link: "pages/products/barboflex.html",
+      },
+      {
+        title: "Finn-Power оборудование",
+        link: "pages/products/finnpower.html",
+      },
+      {
+        title: "D-Hydro оборудование",
+        link: "pages/products/d-hydro.html",
+      },
+      {
+        title: "O+P (Италия)",
+        link: "pages/products/op.html",
+      },
+      {
+        title: "SAMWAY оборудование",
+        link: "pages/products/samway.html",
+      },
+      {
+        title: "UNIFLEX оборудование",
+        link: "pages/products/uniflex.html",
+      },
+      {
+        title: "Оборудование для РВД",
+        link: "pages/products/equipment.html",
+      },
+    ];
+  }
+
+  buildProductsDropdown() {
+    const dropdown = document.querySelector(".nav-dropdown");
+    if (!dropdown) {
+      return;
+    }
+
+    const catalogs = this.getProductCatalogs();
+    dropdown.innerHTML = "";
+
+    catalogs.forEach((catalog) => {
+      const li = document.createElement("li");
+      const link = document.createElement("a");
+      link.className = "nav-dropdown-item";
+      link.href = this.resolveLink(catalog.link);
+      link.textContent = catalog.title;
+      li.appendChild(link);
+      dropdown.appendChild(li);
+    });
+  }
+
     }
   }
 
