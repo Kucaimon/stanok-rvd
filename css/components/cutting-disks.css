@@ -106,21 +106,29 @@
 
 /* Снижаем высоту каталожных карточек */
 .disks-grid .disk-card {
-  min-height: 320px;
+  min-height: 260px;
+  max-width: 260px;
 }
 
 .disks-grid .disk-card .product-card__image {
-  height: 140px;
-  padding: var(--space-2);
+  height: 120px;
+  padding: var(--space-1);
 }
 
 .disks-grid .disk-card .product-card__content {
-  padding: var(--space-4);
+  padding: var(--space-3);
+  gap: var(--space-2);
 }
 
 .disks-grid .disk-card .product-card__title {
-  font-size: var(--font-size-base);
-  line-height: 1.25;
+  font-size: var(--font-size-sm);
+  line-height: 1.2;
+  margin-bottom: var(--space-1);
+}
+
+.disks-grid .disk-card .product-card__button {
+  padding: var(--space-2);
+  font-size: var(--font-size-2xs);
 }
 
 .disk-card::before {
