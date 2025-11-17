@@ -5,8 +5,24 @@
 
   init() {
     this.initContactActions();
+    this.initAddressAccordion();
     this.addCopyToClipboard();
-    this.initAddressSwitcher();
+  }
+
+  initAddressAccordion() {
+    const toggle = document.querySelector(".contact-address-toggle");
+    const panel = document.querySelector(".contact-address-panel");
+    const icon = document.querySelector(".contact-card-toggle-icon");
+
+    if (!toggle || !panel || !icon) {
+      return;
+    }
+
+    toggle.addEventListener("click", () => {
+      const expanded = panel.classList.toggle("active");
+      icon.textContent = expanded ? "⟰" : "⟱";
+      panel.setAttribute("aria-hidden", (!expanded).toString());
+    });
   }
 
   initContactActions() {
@@ -161,42 +177,6 @@
     // Example: Yandex Metrika
     if (typeof ym !== "undefined") {
       ym(10115065, "reachGoal", actionType, { target: target });
-    }
-  }
-
-  initAddressSwitcher() {
-    const addressCard = document.querySelector("[data-address-card]");
-    if (!addressCard) return;
-
-    const buttons = addressCard.querySelectorAll("[data-location]");
-    const panels = addressCard.querySelectorAll("[data-location-panel]");
-
-    const activateLocation = (location) => {
-      buttons.forEach((btn) => {
-        btn.classList.toggle("active", btn.dataset.location === location);
-      });
-
-      panels.forEach((panel) => {
-        panel.classList.toggle(
-          "active",
-          panel.dataset.locationPanel === location
-        );
-      });
-    };
-
-    buttons.forEach((button) => {
-      button.addEventListener("click", () => {
-        const location = button.dataset.location;
-        activateLocation(location);
-      });
-    });
-
-    // Ensure default state
-    const defaultBtn = addressCard.querySelector(
-      "[data-location].active"
-    );
-    if (defaultBtn) {
-      activateLocation(defaultBtn.dataset.location);
     }
   }
 }
