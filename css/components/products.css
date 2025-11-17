@@ -68,6 +68,21 @@
   position: relative;
 }
 
+.product-card__link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  position: relative;
+}
+
+.product-card__link:focus-visible {
+  outline: 2px solid var(--primary-green);
+  outline-offset: 4px;
+}
+
 /* Для дисков - немного другая высота */
 .disk-card .product-card__image {
   height: 160px;
